@@ -1,7 +1,7 @@
-import 'package:health_track/core/constants/app_strings.dart';
-import 'package:health_track/features/onBoarding/domain/entities/on_boarding_item.dart';
 
-import '../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_images.dart';
+import '../../../../../core/constants/app_strings.dart';
+import '../../domain/entities/on_boarding_item.dart';
 
 class OnBoardingStaticDataSource{
  static  final List<OnBoardingItem> onBoardingItems = [

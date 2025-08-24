@@ -11,15 +11,15 @@ class AppDimensions {
   static const double onboardingImageWidth = 299.0;
 
   //Fonts
-  static const double fontSizeXS = 10.0;
-  static const double fontSizeSmall = 12.0;
-  static const double fontSizeMedium = 14.0;
-  static const double fontSizeLarge = 16.0;
-  static const double fontSizeXL = 18.0;
-  static const double fontSizeXXL = 20.0;
-  static const double fontSizeXXXL = 24.0;
-  static const double fontSizeTitle = 28.0;
-  static const double fontSizeHeading = 32.0;
+  static const double fontSize10 = 10.0;
+  static const double fontSize12 = 12.0;
+  static const double fontSize14 = 14.0;
+  static const double fontSize16 = 16.0;
+  static const double fontSize18 = 18.0;
+  static const double fontSize20 = 20.0;
+  static const double fontSize24 = 24.0;
+  static const double fontSize28 = 28.0;
+  static const double fontSize32 = 32.0;
 
   // Padding
   static const double paddingXS = 4.0;
@@ -27,7 +27,8 @@ class AppDimensions {
   static const double paddingMedium = 16.0;
   static const double paddingLarge = 24.0;
   static const double paddingXL = 32.0;
-  static const double paddingXXL = 48.0;
+  static const double paddingXXL = 41.0;
+  static const double paddingXXXL = 48.0;
   
   // Margin
   static const double marginXS = 4.0;
@@ -38,34 +39,49 @@ class AppDimensions {
   static const double marginXXL = 48.0;
   
   // Border Radius
-  static const double radiusXS = 4.0;
-  static const double radiusSmall = 8.0;
-  static const double radiusMedium = 12.0;
-  static const double radiusLarge = 16.0;
-  static const double radiusXL = 20.0;
-  static const double radiusXXL = 24.0;
-  static const double radiusCircular = 50.0;
+  static const double radius4 = 4.0;
+  static const double radius8 = 8.0;
+  static const double radius12 = 12.0;
+  static const double radius16 = 16.0;
+  static const double radius20 = 20.0;
+  static const double radius24 = 24.0;
+  static const double radius50 = 50.0;
 
   //Sized Box Dimensions
-  static const double sizedBoxHeightXS = 4.0;
-  static const double sizedBoxHeightSmall = 8.0;
-  static const double sizedBoxHeightMedium = 16.0;
-  static const double sizedBoxHeightLarge = 24.0;
-  static const double sizedBoxHeightXL = 32.0;
-  static const double sizedBoxHeightXXL = 40.0;
-  static const double sizedBoxHeightXXXL = 51.0;
-  static const double sizedBoxHeight4XL = 95.0;
+  static const double sizedBox4 = 4.0;
+  static const double sizedBox6 = 6.0;
+  static const double sizedBox10 = 10.0;
+  static const double sizedBox12 = 12.0;
+  static const double sizedBox16 = 16.0;
+  static const double sizedBox27 = 27.0;
+  static const double sizedBox22 = 27.0;
+  static const double sizedBox32 = 32.0;
+  static const double sizedBox40 = 40.0;
+  static const double sizedBox51 = 51.0;
+  static const double sizedBox60 = 60.0;
+  static const double sizedBox71 = 71.0;
+  static const double sizedBox80 = 80.0;
+  static const double sizedBox95 = 95.0;
 
 
 
   //Constrained Box  Dimensions
-  static const double constrainedBoxHeightXS = 4.0;
-  static const double constrainedBoxHeightSmall = 8.0;
-  static const double constrainedBoxHeightMedium = 16.0;
-  static const double constrainedBoxHeightLarge = 24.0;
-  static const double constrainedBoxHeightXL = 37.0;
-  static const double constrainedBoxHeightXXL = 40.0;
-  static const double constrainedBoxHeightXXXL = 51.0;
+
+  static const double constrainedBoxHeight40 = 40.0;
+  static const double constrainedBoxHeight45 = 45.0;
+  static const double constrainedBoxHeight51 = 51.0;
+  static const double constrainedBoxHeight56 = 56.0;
+  static const double constrainedBoxHeight60 = 60.0;
+  static const double constrainedBoxWidth298 = 298.0;
+
+
+  // image dimensions
+  static const double imageHeightSmall = 24.0;
+  static const double imageHeightMedium = 48.0;
+  static const double imageHeightLarge = 195.0;
+  static const double imageWidthSmall = 24.0;
+  static const double imageWidthMedium = 48.0;
+  static const double imageWidthLarge = 189.0;
 
   
   // Icon Sizes

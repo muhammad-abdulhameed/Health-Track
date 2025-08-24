@@ -63,11 +63,12 @@ class AppIcons {
   static const String fingerprint = 'assets/icons/fingerprint.svg';
   static const String key = 'assets/icons/key.svg';
   
-  // Social Icons
-  static const String facebook = 'assets/icons/facebook.svg';
-  static const String google = 'assets/icons/google.svg';
+  // auth Icons
+  static const String facebook = 'assets/icons/facebook icon.svg';
+  static const String google = 'assets/icons/google icon.svg';
   static const String apple = 'assets/icons/apple.svg';
-  
+  static const String biometric = 'assets/icons/biometrec icon.svg';
+
   // Settings Icons
   static const String settings = 'assets/icons/settings.svg';
   static const String gear = 'assets/icons/gear.svg';

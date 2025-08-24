@@ -15,13 +15,42 @@ abstract class AppStrings {
   static const String onBtnGetStarted = 'Get Started ';
   static const String onBoardingCacheKey = 'onBoarding';
 
+  //login and signup
+  static const String welcome = 'Welcome';
+  static const String emailOrMobilePhone = 'Email or Mobile Phone';
+  static const String emailHint = 'email@gmail.com';
+  static const String password = 'Password';
+  static const String passwordObs = '************';
+  static const String forgetPassword = 'Forget Password?';
+  static const String orSignUpWith = 'or sign up with';
+  static const String dontHaveAnAccount = 'Don\'t have an account? ';
+  static const String login = 'Login';
+  static const String signUp = 'Sign Up';
+  static const String newAccount = 'New Account';
+  static const String fullName = 'Full Name';
+  static const String fullNameHint = 'Enter your full name';
+  static const String mobileNum = 'Mobile Number';
+  static const String mobileNumHint = '+1 234 567 890';
+  static const String dataOfBirth = 'Date of Birth';
+  static const String setPassword = 'Set Password';
+  static const String confirmPassword = 'Confirm Password';
+  static const String createNewPassword = 'Create New Password';
+
+  static const String alreadyHaveAnAccount = 'Already have an account? ';
+
+
   // App Information
   static const String appName = 'HealthTrack';
+  //separate words for logo design
+  static const String appNameHealth = 'Health';
+  static const String appNameTrack = 'Track';
+
   static const String appVersion = '1.0.0';
   static const String appDescription = 'Your personal health companion';
   
   // Navigation
   static const String home = 'Home';
+
   static const String profile = 'Profile';
   static const String settings = 'Settings';
   static const String health = 'Health';
@@ -131,14 +160,9 @@ abstract class AppStrings {
   static const String skip = 'Skip';
   static const String done = 'Done';
   
-  // Onboarding
-  static const String welcomeTitle = 'Welcome to HealthTrack';
-  static const String welcomeSubtitle = 'Your personal health companion';
-  static const String getStarted = 'Get Started';
-  static const String setupProfile = 'Set up your profile';
-  static const String healthGoals = 'Set your health goals';
-  static const String permissions = 'Grant permissions';
-  static const String readyToGo = 'Ready to go!';
+
+
+
   
   // Profile
   static const String personalInfo = 'Personal Information';

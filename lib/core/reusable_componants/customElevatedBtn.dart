@@ -10,6 +10,6 @@ class CustomElevatedBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton( style: Theme.of(context).elevatedButtonTheme.style,
-        onPressed: onPressed, child: Text(text,style: Theme.of(context).textTheme.bodyLarge,));
+        onPressed: onPressed, child: Text(text,style: Theme.of(context).textTheme.bodyMedium,));
   }
 }

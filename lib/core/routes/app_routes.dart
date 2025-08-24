@@ -1,12 +1,20 @@
 import 'package:go_router/go_router.dart';
+import 'package:health_track/features/app_entry/welcome/presentation/pages/welcome_screen.dart';
 import 'package:health_track/features/auth/login/presentation/pages/login_screen.dart';
-import 'package:health_track/features/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
-import 'package:health_track/features/onBoarding/presentation/pages/on_boarding_screen.dart';
+import 'package:health_track/features/auth/register/presentation/pages/register_screen.dart';
+import 'package:health_track/features/auth/set_password/presentation/pages/set_password_screen.dart';
+
+
+import '../../features/app_entry/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
+import '../../features/app_entry/onBoarding/presentation/pages/on_boarding_screen.dart';
 
 abstract class AppRoutes {
   static const String splash = '/splash';
   static const String onboarding = '/onboarding';
+  static const String welcome = '/welcome';
   static const String login = '/login';
+  static const String register = '/register';
+  static const String setPassword = '/setPassword';
   static const String homeLayout = '/homeLayout';
   static const String productDetails = '/productDetails';
   static const String popularProducts = '/popularProducts';
@@ -17,7 +25,7 @@ abstract class AppRoutes {
 }
 final GoRouter appRouter = GoRouter(
 
-  initialLocation:OnBoardingLocalDataSource.getOnBoardingSeen()?AppRoutes.login:AppRoutes.onboarding,
+  initialLocation: OnBoardingLocalDataSource.getOnBoardingSeen()?AppRoutes.welcome:AppRoutes.onboarding,
   routes: [
     GoRoute(
       path: AppRoutes.onboarding,
@@ -25,9 +33,24 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) =>  OnBoardingScreen(),
     ),
     GoRoute(
+      path: AppRoutes.welcome,
+      name: AppRoutes.welcome,
+      builder: (context, state) =>  WelcomeScreen(),
+    ),
+    GoRoute(
       path: AppRoutes.login,
       name: AppRoutes.login,
       builder: (context, state) =>  LoginScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.register,
+      name: AppRoutes.register,
+      builder: (context, state) =>  RegisterScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.setPassword,
+      name: AppRoutes.setPassword,
+      builder: (context, state) => SetPasswordScreen(),
     ),
     /*
     GoRoute(

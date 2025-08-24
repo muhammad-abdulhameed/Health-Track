@@ -5,13 +5,15 @@ import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/customElevatedBtn.dart';
 import 'package:health_track/core/reusable_componants/shader.dart';
-import 'package:health_track/features/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
-import 'package:health_track/features/onBoarding/data/data_sources/on_boarding_static_data_source.dart';
-import 'package:health_track/features/onBoarding/presentation/widgets/on_boarding_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../core/constants/app_colors.dart';
-import '../../../../core/routes/app_routes.dart';
+
+import '../../../../../core/constants/app_colors.dart';
+import '../../../../../core/routes/app_routes.dart';
+
+import '../../data/data_sources/on_boarding_local_data_source.dart';
+import '../../data/data_sources/on_boarding_static_data_source.dart';
+import '../widgets/on_boarding_widget.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   OnBoardingScreen({super.key});
@@ -71,7 +73,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 activeDotColor: AppColors.primary,
               ), // your preferred effect
             ),
-            SizedBox(height: AppDimensions.sizedBoxHeightXXL.h),
+            SizedBox(height: AppDimensions.sizedBox40.h),
             CustomElevatedBtn(
               text: page == 2
                   ? AppStrings.onBtnGetStarted
@@ -79,7 +81,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               onPressed: () {
                 if (page == 2) {
                   OnBoardingLocalDataSource.setOnBoardingSeen();
-                  GoRouter.of(context).goNamed(AppRoutes.login);
+                  GoRouter.of(context).goNamed(AppRoutes.welcome);
 
                 } else {
                   _pageController.nextPage(
