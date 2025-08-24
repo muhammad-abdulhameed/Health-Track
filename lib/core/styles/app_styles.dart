@@ -103,7 +103,7 @@ class AppStyles {
       vertical: AppDimensions.paddingMedium,
     ),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+      borderRadius: BorderRadius.circular(AppDimensions.radius12),
     ),
     textStyle: button,
   );
@@ -118,7 +118,7 @@ class AppStyles {
       vertical: AppDimensions.paddingMedium,
     ),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+      borderRadius: BorderRadius.circular(AppDimensions.radius12),
     ),
     textStyle: button,
   );
@@ -131,7 +131,7 @@ class AppStyles {
       vertical: AppDimensions.paddingMedium,
     ),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+      borderRadius: BorderRadius.circular(AppDimensions.radius12),
     ),
     textStyle: button,
   );
@@ -157,7 +157,7 @@ class AppStyles {
     backgroundColor: AppColors.primary,
     foregroundColor: Colors.white,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+      borderRadius: BorderRadius.circular(AppDimensions.radius8),
     ),
     padding: const EdgeInsets.all(AppDimensions.paddingMedium),
   );
@@ -167,19 +167,19 @@ class AppStyles {
     filled: true,
     fillColor: AppColors.surface,
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusMedium)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius12)),
       borderSide: BorderSide.none,
     ),
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusMedium)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius12)),
       borderSide: BorderSide.none,
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusMedium)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius12)),
       borderSide: BorderSide(color: AppColors.primary, width: 2),
     ),
     errorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusMedium)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius12)),
       borderSide: BorderSide(color: AppColors.error, width: 2),
     ),
     contentPadding: EdgeInsets.all(AppDimensions.paddingMedium),
@@ -193,15 +193,15 @@ class AppStyles {
     filled: true,
     fillColor: AppColors.surface,
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusLarge)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius16)),
       borderSide: BorderSide.none,
     ),
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusLarge)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius16)),
       borderSide: BorderSide.none,
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radiusLarge)),
+      borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius16)),
       borderSide: BorderSide(color: AppColors.primary, width: 2),
     ),
     contentPadding: EdgeInsets.symmetric(
@@ -222,7 +222,7 @@ class AppStyles {
   // Card Styles
   static BoxDecoration cardDecoration = BoxDecoration(
     color: AppColors.card,
-    borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+    borderRadius: BorderRadius.circular(AppDimensions.radius12),
     boxShadow: [
       BoxShadow(
         color: AppColors.shadow,
@@ -234,7 +234,7 @@ class AppStyles {
 
   static BoxDecoration cardDecorationDark = BoxDecoration(
     color: AppColors.cardDark,
-    borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+    borderRadius: BorderRadius.circular(AppDimensions.radius12),
     boxShadow: [
       BoxShadow(
         color: AppColors.shadowDark,
@@ -250,7 +250,7 @@ class AppStyles {
       end: Alignment.bottomRight,
       colors: [AppColors.primary, AppColors.secondary],
     ),
-    borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+    borderRadius: BorderRadius.circular(AppDimensions.radius12),
     boxShadow: [
       BoxShadow(
         color: AppColors.shadow,
@@ -268,7 +268,7 @@ class AppStyles {
     labelStyle: body2,
     padding: const EdgeInsets.all(AppDimensions.paddingSmall),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusCircular),
+      borderRadius: BorderRadius.circular(AppDimensions.radius50),
     ),
   );
 
@@ -304,7 +304,7 @@ class AppStyles {
     foregroundColor: Colors.white,
     elevation: 6,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+      borderRadius: BorderRadius.circular(AppDimensions.radius12),
     ),
   );
 
@@ -313,7 +313,7 @@ class AppStyles {
     backgroundColor: AppColors.card,
     elevation: 24,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusLarge),
+      borderRadius: BorderRadius.circular(AppDimensions.radius16),
     ),
     titleTextStyle: headline6,
     contentTextStyle: body2,
@@ -324,7 +324,7 @@ class AppStyles {
     backgroundColor: AppColors.surface,
     contentTextStyle: body2.copyWith(color: Colors.white),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+      borderRadius: BorderRadius.circular(AppDimensions.radius8),
     ),
     elevation: AppDimensions.snackbarElevation,
   );

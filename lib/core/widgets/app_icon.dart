@@ -57,9 +57,9 @@ class AppIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final iconSize = size ?? AppDimensions.iconSizeMedium;
-    final iconColor = color ?? AppColors.primary;
-    final bgColor = backgroundColor ?? Colors.transparent;
+    final iconSize = size ?? AppDimensions.iconSizeXL;
+    final iconColor = color ?? Colors.white;
+    final bgColor = backgroundColor ?? AppColors.primary;
     final iconPadding = padding ?? EdgeInsets.zero;
 
     Widget iconWidget = _buildIconWidget(iconSize, iconColor);
@@ -73,8 +73,8 @@ class AppIcon extends StatelessWidget {
 
     if (isCircular) {
       return Container(
-        width: iconSize + (iconPadding.horizontal),
-        height: iconSize + (iconPadding.vertical),
+        width: 40,
+        height: 40,
         decoration: BoxDecoration(
           color: bgColor,
           shape: BoxShape.circle,
@@ -91,7 +91,7 @@ class AppIcon extends StatelessWidget {
         height: iconSize + (iconPadding.vertical),
         decoration: BoxDecoration(
           color: bgColor,
-          borderRadius: BorderRadius.circular(borderRadius ?? AppDimensions.radiusSmall),
+          borderRadius: BorderRadius.circular(borderRadius ?? AppDimensions.radius8),
           border: border,
         ),
         padding: iconPadding,
@@ -114,8 +114,8 @@ class AppIcon extends StatelessWidget {
     if (iconPath.endsWith('.svg')) {
       return SvgPicture.asset(
         iconPath,
-        width: size,
-        height: size,
+        width: AppDimensions.iconSizeMedium,
+        height: AppDimensions.iconSizeMedium,
         colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
       );
     } else if (iconPath.startsWith('Icons.')) {
@@ -295,7 +295,7 @@ class AppIconStyles {
         height: size + AppDimensions.paddingLarge * 2 + 40, // Extra height for text
         decoration: BoxDecoration(
           color: AppColors.primary,
-          borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+          borderRadius: BorderRadius.circular(AppDimensions.radius12),
           border: isSelected 
             ? Border.all(color: Colors.white, width: 2)
             : null,

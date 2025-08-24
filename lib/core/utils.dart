@@ -245,7 +245,7 @@ class AppUtils {
         backgroundColor: backgroundColor ?? AppColors.primary,
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppDimensions.radiusMedium),
+          borderRadius: BorderRadius.circular(AppDimensions.radius12),
         ),
       ),
     );

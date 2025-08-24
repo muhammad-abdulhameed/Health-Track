@@ -27,11 +27,12 @@ class AppColors {
   static const Color accentLight = Color(0xFFFF79B0);
   static const Color accentDark = Color(0xFFC60055);
   
-  // Background Colors (Matching Figma dark theme)
-  static const Color background = Color(0xFF121212); // Dark background from Figma
-  static const Color surface = Color(0xFF1E1E1E); // Dark surface from Figma
+  // Background Colors
+  static const Color background = Color(0xFFFFFFFF); // Dark background from Figma
+  static const Color surface =  Color(0xFFE9F6FE); // Dark surface from Figma
   static const Color card = Color(0xFFFFFFFF); // White cards from Figma
   static const Color cardDark = Color(0xFF2A2A2A); // Dark card variant
+  static const Color onContainer =  Color(0xFFE9F6FE); // Light grey background
   
   // Status Colors
   static const Color success = Color(0xFF4CAF50);

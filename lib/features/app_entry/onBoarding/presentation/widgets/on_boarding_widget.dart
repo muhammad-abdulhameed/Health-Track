@@ -5,7 +5,8 @@ import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_images.dart';
 import 'package:health_track/core/core.dart';
 import 'package:health_track/core/reusable_componants/shader.dart';
-import 'package:health_track/features/onBoarding/domain/entities/on_boarding_item.dart';
+
+import '../../domain/entities/on_boarding_item.dart';
 
 class OnBoardingWidget extends StatelessWidget {
   const OnBoardingWidget({super.key, required this.onBoardingItem});
@@ -36,13 +37,13 @@ class OnBoardingWidget extends StatelessWidget {
             fit: BoxFit.contain,
           ),
         ),
-        SizedBox(height: AppDimensions.sizedBoxHeightXL.h),
+        SizedBox(height: AppDimensions.sizedBox32.h),
         SizedBox(
-          height: AppDimensions.sizedBoxHeight4XL.h,
+          height: AppDimensions.sizedBox95.h,
           child: CustomShader(
             child: Text(
               onBoardingItem.title,
-              style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontSize: AppDimensions.fontSizeHeading.sp),
+              style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontSize: AppDimensions.fontSize32.sp),
               textAlign: TextAlign.center,
             ),
           ),

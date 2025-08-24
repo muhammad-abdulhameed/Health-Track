@@ -10,7 +10,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   await SharedPref.init();
-  runApp(const ScreenUtilInit( designSize: const Size(360, 800),
+  runApp(const ScreenUtilInit( designSize: Size(360, 800),
       minTextAdapt: true,
       splitScreenMode: true,
       child:  HealthTrackApp()));
