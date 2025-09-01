@@ -16,7 +16,7 @@ import '../../data/data_sources/on_boarding_static_data_source.dart';
 import '../widgets/on_boarding_widget.dart';
 
 class OnBoardingScreen extends StatefulWidget {
-  OnBoardingScreen({super.key});
+  const OnBoardingScreen({super.key});
 
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();

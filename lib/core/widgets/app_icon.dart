@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../constants/constants.dart';
 import '../styles/app_styles.dart';
@@ -57,7 +58,7 @@ class AppIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final iconSize = size ?? AppDimensions.iconSizeXL;
+    final iconSize = size ?? AppDimensions.iconSize40;
     final iconColor = color ?? Colors.white;
     final bgColor = backgroundColor ?? AppColors.primary;
     final iconPadding = padding ?? EdgeInsets.zero;
@@ -90,8 +91,12 @@ class AppIcon extends StatelessWidget {
         width: iconSize + (iconPadding.horizontal),
         height: iconSize + (iconPadding.vertical),
         decoration: BoxDecoration(
-          color: bgColor,
-          borderRadius: BorderRadius.circular(borderRadius ?? AppDimensions.radius8),
+          gradient: LinearGradient(colors: AppColors.mainGradient,
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          ),
+
+          borderRadius: BorderRadius.circular(borderRadius ?? AppDimensions.radius12),
           border: border,
         ),
         padding: iconPadding,
@@ -114,8 +119,8 @@ class AppIcon extends StatelessWidget {
     if (iconPath.endsWith('.svg')) {
       return SvgPicture.asset(
         iconPath,
-        width: AppDimensions.iconSizeMedium,
-        height: AppDimensions.iconSizeMedium,
+        width: AppDimensions.iconSize24,
+        height: AppDimensions.iconSize24,
         colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
       );
     } else if (iconPath.startsWith('Icons.')) {
@@ -274,7 +279,7 @@ class AppIconStyles {
       size: size,
       color: color ?? Colors.white,
       backgroundColor: AppColors.primary,
-      padding: const EdgeInsets.all(AppDimensions.paddingSmall),
+      padding: const EdgeInsets.all(AppDimensions.padding8),
       onTap: onTap,
     );
   }
@@ -283,7 +288,7 @@ class AppIconStyles {
   static Widget squareSpecialty({
     required String iconPath,
     required String label,
-    double size = AppDimensions.iconSizeLarge,
+    double size = AppDimensions.iconSize40,
     Color? color,
     VoidCallback? onTap,
     bool isSelected = false,
@@ -291,16 +296,16 @@ class AppIconStyles {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: size + AppDimensions.paddingLarge * 2,
-        height: size + AppDimensions.paddingLarge * 2 + 40, // Extra height for text
+        width: size + AppDimensions.padding24 * 2,
+        height: size + AppDimensions.padding24 * 2 + 40, // Extra height for text
         decoration: BoxDecoration(
-          color: AppColors.primary,
+          gradient: LinearGradient(colors: AppColors.mainGradient,),
           borderRadius: BorderRadius.circular(AppDimensions.radius12),
           border: isSelected 
             ? Border.all(color: Colors.white, width: 2)
             : null,
         ),
-        padding: const EdgeInsets.all(AppDimensions.paddingMedium),
+        padding:  REdgeInsets.all(AppDimensions.padding4),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -309,10 +314,10 @@ class AppIconStyles {
               size: size,
               color: Colors.white,
             ),
-            const SizedBox(height: AppDimensions.paddingSmall),
+            const SizedBox(height: AppDimensions.padding8),
             Text(
               label,
-              style: AppStyles.caption.copyWith(
+              style: AppStyles.caption.copyWith(fontSize: 16.sp,
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
               ),
@@ -328,7 +333,7 @@ class AppIconStyles {
   static Widget notificationBadge({
     required String iconPath,
     required int count,
-    double size = AppDimensions.iconSizeMedium,
+    double size = AppDimensions.iconSize24,
     Color? color,
     VoidCallback? onTap,
   }) {
@@ -372,7 +377,7 @@ class AppIconStyles {
   // Heart icon with different states (like in Figma)
   static Widget heartIcon({
     required bool isFilled,
-    double size = AppDimensions.iconSizeMedium,
+    double size = AppDimensions.iconSize24,
     VoidCallback? onTap,
   }) {
     return AppIcon(

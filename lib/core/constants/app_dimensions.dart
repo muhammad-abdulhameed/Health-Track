@@ -1,4 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppDimensions {
   AppDimensions._();
@@ -22,13 +21,14 @@ class AppDimensions {
   static const double fontSize32 = 32.0;
 
   // Padding
-  static const double paddingXS = 4.0;
-  static const double paddingSmall = 8.0;
-  static const double paddingMedium = 16.0;
-  static const double paddingLarge = 24.0;
-  static const double paddingXL = 32.0;
-  static const double paddingXXL = 41.0;
-  static const double paddingXXXL = 48.0;
+  static const double padding4 = 4.0;
+  static const double padding8 = 8.0;
+  static const double padding12 = 12.0;
+  static const double padding16 = 16.0;
+  static const double padding24 = 24.0;
+  static const double padding32 = 32.0;
+  static const double padding41 = 41.0;
+  static const double padding48 = 48.0;
   
   // Margin
   static const double marginXS = 4.0;
@@ -53,6 +53,7 @@ class AppDimensions {
   static const double sizedBox10 = 10.0;
   static const double sizedBox12 = 12.0;
   static const double sizedBox16 = 16.0;
+  static const double sizedBox19 = 19.0;
   static const double sizedBox27 = 27.0;
   static const double sizedBox22 = 27.0;
   static const double sizedBox32 = 32.0;
@@ -66,7 +67,6 @@ class AppDimensions {
 
 
   //Constrained Box  Dimensions
-
   static const double constrainedBoxHeight40 = 40.0;
   static const double constrainedBoxHeight45 = 45.0;
   static const double constrainedBoxHeight51 = 51.0;
@@ -76,20 +76,23 @@ class AppDimensions {
 
 
   // image dimensions
-  static const double imageHeightSmall = 24.0;
-  static const double imageHeightMedium = 48.0;
+  static const double imageHeight30 = 30.0;
+  static const double imageHeight40 = 40.0;
+  static const double imageHeight48 = 48.0;
   static const double imageHeightLarge = 195.0;
-  static const double imageWidthSmall = 24.0;
+  static const double imageWidth30 = 30.0;
+  static const double imageWidth40 = 40.0;
   static const double imageWidthMedium = 48.0;
   static const double imageWidthLarge = 189.0;
 
   
   // Icon Sizes
-  static const double iconSizeXS = 16.0;
+  static const double iconSize16 = 16.0;
   static const double iconSizeSmall = 20.0;
-  static const double iconSizeMedium = 24.0;
-  static const double iconSizeLarge = 32.0;
-  static const double iconSizeXL = 40.0;
+  static const double iconSize24 = 24.0;
+  static const double iconSize27 = 27.0;
+  static const double iconSize30 = 30.0;
+  static const double iconSize40 = 40.0;
   static const double iconSizeXXL = 48.0;
   
   // Button Sizes
@@ -114,7 +117,7 @@ class AppDimensions {
   static const double cardElevationPressed = 1.0;
   
   // App Bar
-  static const double appBarHeight = 56.0;
+  static const double appBarHeight = 36.0;
   static const double appBarElevation = 4.0;
   
   // Bottom Navigation
@@ -167,6 +170,12 @@ class AppDimensions {
   static const double chartHeightLarge = 300.0;
   static const double chartBarWidth = 20.0;
   static const double chartBarSpacing = 8.0;
+
+  // Upcoming Appointment Banner
+  static const double appointmentBannerHeight = 260.0;
+  static const double appointmentDetailsContainerHeight = 130.0;
+
+
   
   // Appointment Card Dimensions
   static const double appointmentCardHeight = 120.0;
@@ -180,7 +189,10 @@ class AppDimensions {
   static const double doctorAvatarSizeLarge = 100.0;
   
   // Calendar Dimensions
-  static const double calendarDaySize = 40.0;
+  static const double calendarDayHeightSize = 60.0;
+  static const double calendarDayWidthSize = 45.0;
+  static const double calendarDayRadiusSize = 18.0;
+
   static const double calendarDaySizeLarge = 50.0;
   static const double calendarHeaderHeight = 60.0;
   static const double calendarWeekHeight = 50.0;

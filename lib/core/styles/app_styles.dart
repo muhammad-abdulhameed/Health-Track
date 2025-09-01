@@ -99,8 +99,8 @@ class AppStyles {
     foregroundColor: Colors.white,
     elevation: 0,
     padding: const EdgeInsets.symmetric(
-      horizontal: AppDimensions.paddingLarge,
-      vertical: AppDimensions.paddingMedium,
+      horizontal: AppDimensions.padding24,
+      vertical: AppDimensions.padding16,
     ),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.radius12),
@@ -114,8 +114,8 @@ class AppStyles {
     elevation: 0,
     side: const BorderSide(color: AppColors.primary, width: 2),
     padding: const EdgeInsets.symmetric(
-      horizontal: AppDimensions.paddingLarge,
-      vertical: AppDimensions.paddingMedium,
+      horizontal: AppDimensions.padding24,
+      vertical: AppDimensions.padding16,
     ),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.radius12),
@@ -127,8 +127,8 @@ class AppStyles {
     foregroundColor: AppColors.primary,
     side: const BorderSide(color: AppColors.primary, width: 2),
     padding: const EdgeInsets.symmetric(
-      horizontal: AppDimensions.paddingLarge,
-      vertical: AppDimensions.paddingMedium,
+      horizontal: AppDimensions.padding24,
+      vertical: AppDimensions.padding16,
     ),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.radius12),
@@ -139,8 +139,8 @@ class AppStyles {
   static ButtonStyle textButtonStyle = TextButton.styleFrom(
     foregroundColor: AppColors.primary,
     padding: const EdgeInsets.symmetric(
-      horizontal: AppDimensions.paddingMedium,
-      vertical: AppDimensions.paddingSmall,
+      horizontal: AppDimensions.padding16,
+      vertical: AppDimensions.padding8,
     ),
     textStyle: button,
   );
@@ -150,7 +150,7 @@ class AppStyles {
     backgroundColor: AppColors.primary,
     foregroundColor: Colors.white,
     shape: const CircleBorder(),
-    padding: const EdgeInsets.all(AppDimensions.paddingMedium),
+    padding: const EdgeInsets.all(AppDimensions.padding16),
   );
 
   static ButtonStyle squareIconButtonStyle = IconButton.styleFrom(
@@ -159,7 +159,7 @@ class AppStyles {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.radius8),
     ),
-    padding: const EdgeInsets.all(AppDimensions.paddingMedium),
+    padding: const EdgeInsets.all(AppDimensions.padding16),
   );
 
   // Input Field Styles
@@ -182,7 +182,7 @@ class AppStyles {
       borderRadius: BorderRadius.all(Radius.circular(AppDimensions.radius12)),
       borderSide: BorderSide(color: AppColors.error, width: 2),
     ),
-    contentPadding: EdgeInsets.all(AppDimensions.paddingMedium),
+    contentPadding: EdgeInsets.all(AppDimensions.padding16),
     hintStyle: TextStyle(
       color: AppColors.textLight,
       fontSize: 14,
@@ -205,8 +205,8 @@ class AppStyles {
       borderSide: BorderSide(color: AppColors.primary, width: 2),
     ),
     contentPadding: EdgeInsets.symmetric(
-      horizontal: AppDimensions.paddingLarge,
-      vertical: AppDimensions.paddingMedium,
+      horizontal: AppDimensions.padding24,
+      vertical: AppDimensions.padding16,
     ),
     hintText: 'Search...',
     hintStyle: TextStyle(
@@ -266,7 +266,7 @@ class AppStyles {
     selectedColor: AppColors.primary,
     disabledColor: AppColors.textLight,
     labelStyle: body2,
-    padding: const EdgeInsets.all(AppDimensions.paddingSmall),
+    padding: const EdgeInsets.all(AppDimensions.padding8),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(AppDimensions.radius50),
     ),
@@ -338,14 +338,14 @@ class AppStyles {
 
   // Switch Styles
   static SwitchThemeData switchTheme = SwitchThemeData(
-    thumbColor: MaterialStateProperty.resolveWith((states) {
-      if (states.contains(MaterialState.selected)) {
+    thumbColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
         return AppColors.primary;
       }
       return AppColors.textLight;
     }),
-    trackColor: MaterialStateProperty.resolveWith((states) {
-      if (states.contains(MaterialState.selected)) {
+    trackColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
         return AppColors.primary.withOpacity(0.5);
       }
       return AppColors.border;
@@ -354,8 +354,8 @@ class AppStyles {
 
   // Radio Styles
   static RadioThemeData radioTheme = RadioThemeData(
-    fillColor: MaterialStateProperty.resolveWith((states) {
-      if (states.contains(MaterialState.selected)) {
+    fillColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
         return AppColors.primary;
       }
       return AppColors.textLight;
@@ -364,12 +364,12 @@ class AppStyles {
 
   // Checkbox Styles
   static CheckboxThemeData checkboxTheme = CheckboxThemeData(
-    fillColor: MaterialStateProperty.resolveWith((states) {
-      if (states.contains(MaterialState.selected)) {
+    fillColor: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
         return AppColors.primary;
       }
       return AppColors.textLight;
     }),
-    checkColor: MaterialStateProperty.all(Colors.white),
+    checkColor: WidgetStateProperty.all(Colors.white),
   );
 } 

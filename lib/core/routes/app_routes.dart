@@ -3,6 +3,7 @@ import 'package:health_track/features/app_entry/welcome/presentation/pages/welco
 import 'package:health_track/features/auth/login/presentation/pages/login_screen.dart';
 import 'package:health_track/features/auth/register/presentation/pages/register_screen.dart';
 import 'package:health_track/features/auth/set_password/presentation/pages/set_password_screen.dart';
+import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
 
 
 import '../../features/app_entry/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
@@ -15,7 +16,7 @@ abstract class AppRoutes {
   static const String login = '/login';
   static const String register = '/register';
   static const String setPassword = '/setPassword';
-  static const String homeLayout = '/homeLayout';
+  static const String mainLayout = '/mainLayout';
   static const String productDetails = '/productDetails';
   static const String popularProducts = '/popularProducts';
   static const String categories = '/categories';
@@ -51,6 +52,11 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.setPassword,
       name: AppRoutes.setPassword,
       builder: (context, state) => SetPasswordScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.mainLayout,
+      name: AppRoutes.mainLayout,
+      builder: (context, state) => MainLayout(),
     ),
     /*
     GoRoute(

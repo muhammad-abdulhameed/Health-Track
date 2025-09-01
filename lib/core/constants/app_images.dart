@@ -6,6 +6,7 @@ abstract class AppImages{
   static const String onBoardingImage3 = '${baseUrl}onBoarding3.png';
   static const String logo = '${baseUrl}appLogo.svg';
 
-  // auth
+  // main layout images
+  static const String profilePlaceholder = '${baseUrl}Perfil.png';
 
 }

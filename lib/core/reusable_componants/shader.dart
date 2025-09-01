@@ -9,8 +9,8 @@ class CustomShader extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(shaderCallback: (bounds) {
       return const LinearGradient(colors: AppColors.mainGradient,end: Alignment.bottomCenter,begin: Alignment.topCenter,).createShader(bounds);
-    },
-      child: child,blendMode: BlendMode.srcIn,
+    },blendMode: BlendMode.srcIn,
+      child: child,
 
     );
   }

@@ -18,7 +18,7 @@ class SetPasswordScreen extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppBar.appBar(AppStrings.setPassword),
         body: Padding(
-          padding: REdgeInsets.symmetric(horizontal: AppDimensions.paddingXL),
+          padding: REdgeInsets.symmetric(horizontal: AppDimensions.padding32),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,6 +60,6 @@ class SetPasswordScreen extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }

@@ -12,12 +12,10 @@ class AppTheme {
         primary: AppColors.primary,
         secondary: AppColors.secondary,
         surface: AppColors.surface,
-        background: AppColors.background,
         error: AppColors.error,
         onPrimary: Colors.white,
         onSecondary: Colors.black,
         onSurface: AppColors.textPrimary,
-        onBackground: AppColors.textPrimary,
         onError: Colors.white,
       ),
       appBarTheme:  AppBarTheme(
@@ -34,6 +32,15 @@ class AppTheme {
           fontSize: AppDimensions.fontSize24.sp,
           color: AppColors.textSecondary,
         ),
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: AppColors.surface,
+        selectedItemColor: AppColors.primary,
+        unselectedItemColor: AppColors.textLight,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        elevation: 0,
+        type: BottomNavigationBarType.fixed,
       ),
 
       cardTheme: CardThemeData(
@@ -58,8 +65,8 @@ class AppTheme {
             child: child,
           ),
           padding: EdgeInsets.symmetric(
-            horizontal: AppDimensions.paddingLarge.w,
-            vertical: AppDimensions.paddingSmall.h,
+            horizontal: AppDimensions.padding24.w,
+            vertical: AppDimensions.padding8.h,
           ),
           minimumSize: Size(191.w, 45.h),
           maximumSize: Size(269.w, 45.h),
@@ -75,14 +82,14 @@ class AppTheme {
           foregroundColor: AppColors.primary,
           side: const BorderSide(color: AppColors.primary),
           padding: const EdgeInsets.symmetric(
-            horizontal: AppDimensions.paddingLarge,
-            vertical: AppDimensions.paddingMedium,
+            horizontal: AppDimensions.padding24,
+            vertical: AppDimensions.padding16,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppDimensions.radius12),
           ),
           textStyle:  TextStyle(
-            fontSize: AppDimensions.paddingLarge.sp,
+            fontSize: AppDimensions.padding24.sp,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -126,10 +133,10 @@ class AppTheme {
             width: AppDimensions.borderWidthThick,
           ),
         ),
-        contentPadding: const EdgeInsets.all(AppDimensions.paddingMedium),
+        contentPadding: const EdgeInsets.all(AppDimensions.padding16),
         hintStyle: TextStyle(
           color: AppColors.textLight,
-          fontSize: AppDimensions.paddingMedium.sp,
+          fontSize: AppDimensions.padding16.sp,
         ),
       ),
 
@@ -141,7 +148,7 @@ class AppTheme {
           color: AppColors.textPrimary,
         ),
         displayMedium: TextStyle(
-          fontSize: AppDimensions.paddingXL.sp,
+          fontSize: AppDimensions.padding32.sp,
           fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
@@ -152,7 +159,7 @@ class AppTheme {
           color: AppColors.textPrimary,
         ),
         headlineMedium: TextStyle(
-          fontSize: AppDimensions.paddingLarge.sp,
+          fontSize: AppDimensions.padding24.sp,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
         ),
@@ -175,8 +182,10 @@ class AppTheme {
           color: AppColors.textSecondary,
         ),
         bodySmall: TextStyle(
-          fontSize: AppDimensions.paddingSmall.sp,
-          color: AppColors.textLight,
+          fontFamily: AppStrings.mainFont,
+          fontWeight: FontWeight.w400,
+          fontSize: AppDimensions.fontSize14.sp,
+          color: AppColors.textSecondary,
         ),
         labelLarge: TextStyle(
           fontFamily: AppStrings.mainFont,
@@ -184,10 +193,22 @@ class AppTheme {
           fontSize: AppDimensions.fontSize20.sp,
           color: AppColors.textPrimary,
         ),
+        titleMedium: TextStyle(
+          fontFamily: AppStrings.mainFont,
+          fontWeight: FontWeight.w600,
+          fontSize: AppDimensions.fontSize16.sp,
+          color: AppColors.textSecondary,
+        ),
+        titleSmall: TextStyle(
+          fontFamily: AppStrings.mainFont,
+          fontWeight: FontWeight.w500,
+          fontSize: AppDimensions.fontSize14.sp,
+          color: AppColors.textSecondary,
+        ),
       ),
       iconTheme: const IconThemeData(
         color: AppColors.primary,
-        size: AppDimensions.iconSizeMedium,
+        size: AppDimensions.iconSize24,
       ),
       dividerTheme: const DividerThemeData(
         color: AppColors.border,
@@ -205,12 +226,10 @@ class AppTheme {
         primary: AppColors.primary,
         secondary: AppColors.secondary,
         surface: Color(0xFF1E1E1E),
-        background: Color(0xFF121212),
         error: AppColors.error,
         onPrimary: Colors.white,
         onSecondary: Colors.black,
         onSurface: Colors.white,
-        onBackground: Colors.white,
         onError: Colors.white,
       ),
       appBarTheme: const AppBarTheme(
@@ -219,7 +238,7 @@ class AppTheme {
         elevation: 0,
         centerTitle: true,
         titleTextStyle: TextStyle(
-          fontSize: AppDimensions.paddingLarge,
+          fontSize: AppDimensions.padding24,
           fontWeight: FontWeight.w600,
           color: Colors.white,
         ),
@@ -239,14 +258,14 @@ class AppTheme {
           backgroundColor: AppColors.textPrimary,
           foregroundColor: Colors.white,
           padding: const EdgeInsets.symmetric(
-            horizontal: AppDimensions.paddingLarge,
-            vertical: AppDimensions.paddingMedium,
+            horizontal: AppDimensions.padding24,
+            vertical: AppDimensions.padding16,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100.r),
           ),
           textStyle: const TextStyle(
-            fontSize: AppDimensions.paddingLarge,
+            fontSize: AppDimensions.padding24,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -256,14 +275,14 @@ class AppTheme {
           foregroundColor: AppColors.primary,
           side: const BorderSide(color: AppColors.primary),
           padding: const EdgeInsets.symmetric(
-            horizontal: AppDimensions.paddingLarge,
-            vertical: AppDimensions.paddingMedium,
+            horizontal: AppDimensions.padding24,
+            vertical: AppDimensions.padding16,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppDimensions.radius12),
           ),
           textStyle: const TextStyle(
-            fontSize: AppDimensions.paddingLarge,
+            fontSize: AppDimensions.padding24,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -272,11 +291,11 @@ class AppTheme {
         style: TextButton.styleFrom(
           foregroundColor: AppColors.primary,
           padding: const EdgeInsets.symmetric(
-            horizontal: AppDimensions.paddingMedium,
-            vertical: AppDimensions.paddingSmall,
+            horizontal: AppDimensions.padding16,
+            vertical: AppDimensions.padding8,
           ),
           textStyle: const TextStyle(
-            fontSize: AppDimensions.paddingLarge,
+            fontSize: AppDimensions.padding24,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -306,49 +325,49 @@ class AppTheme {
             width: AppDimensions.borderWidthThick,
           ),
         ),
-        contentPadding: const EdgeInsets.all(AppDimensions.paddingMedium),
+        contentPadding: const EdgeInsets.all(AppDimensions.padding16),
         hintStyle: TextStyle(
           color: AppColors.textLight,
-          fontSize: AppDimensions.paddingMedium,
+          fontSize: AppDimensions.padding16,
         ),
       ),
       textTheme: TextTheme(
         displayLarge: TextStyle(
-          fontSize: AppDimensions.paddingXXL,
+          fontSize: AppDimensions.padding41,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
         displayMedium: TextStyle(
-          fontSize: AppDimensions.paddingXL,
+          fontSize: AppDimensions.padding32,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
         headlineLarge: TextStyle(
-          fontSize: AppDimensions.paddingLarge,
+          fontSize: AppDimensions.padding24,
           fontWeight: FontWeight.w600,
           color: Colors.white,
         ),
         headlineMedium: TextStyle(
-          fontSize: AppDimensions.paddingLarge,
+          fontSize: AppDimensions.padding24,
           fontWeight: FontWeight.w600,
           color: Colors.white,
         ),
         bodyLarge: TextStyle(
-          fontSize: AppDimensions.paddingLarge,
+          fontSize: AppDimensions.padding24,
           color: Colors.white,
         ),
         bodyMedium: TextStyle(
-          fontSize: AppDimensions.paddingMedium,
+          fontSize: AppDimensions.padding16,
           color: Colors.white70,
         ),
         bodySmall: TextStyle(
-          fontSize: AppDimensions.paddingSmall,
+          fontSize: AppDimensions.padding8,
           color: Colors.white60,
         ),
       ),
       iconTheme: const IconThemeData(
         color: AppColors.primary,
-        size: AppDimensions.iconSizeMedium,
+        size: AppDimensions.iconSize24,
       ),
       dividerTheme: const DividerThemeData(
         color: Colors.white24,

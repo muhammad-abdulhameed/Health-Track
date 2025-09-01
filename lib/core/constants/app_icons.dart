@@ -1,11 +1,10 @@
 class AppIcons {
   // Navigation Icons
   static const String home = 'assets/icons/home.svg';
-  static const String profile = 'assets/icons/profile.svg';
+
   static const String calendar = 'assets/icons/calendar.svg';
   static const String document = 'assets/icons/document.svg';
-  static const String search = 'assets/icons/search.svg';
-  
+
   // Medical Icons
   static const String stethoscope = 'assets/icons/stethoscope.svg';
   static const String heartbeat = 'assets/icons/heartbeat.svg';
@@ -43,8 +42,7 @@ class AppIcons {
   static const String clock = 'assets/icons/clock.svg';
   static const String info = 'assets/icons/info.svg';
   static const String question = 'assets/icons/question.svg';
-  static const String notification = 'assets/icons/notification.svg';
-  
+
   // Communication Icons
   static const String chat = 'assets/icons/chat.svg';
   static const String phone = 'assets/icons/phone.svg';
@@ -69,8 +67,35 @@ class AppIcons {
   static const String apple = 'assets/icons/apple.svg';
   static const String biometric = 'assets/icons/biometrec icon.svg';
 
+  // main layout Icons
+  static const String messages = 'assets/icons/messages.svg';
+  static const String favorites = 'assets/icons/favorites.svg';
+  static const String profile = 'assets/icons/Perfil.svg';
+  static const String editProfile = 'assets/icons/edit icon.svg';
+  static const String search = 'assets/icons/Search.svg';
+  static const String notifications = 'assets/icons/Notifications.svg';
+  static const String settings = 'assets/icons/Settigns.svg';
+  static const String homeEmptyIcon = 'assets/icons/Home empty icon.svg';
+  static const String homeSelectedIcon = 'assets/icons/home selected icon.svg';
+  static const String messageEmptyIcon = 'assets/icons/meesages icon.svg';
+  static const String messageSelectedIcon = 'assets/icons/message selected icon.svg';
+  static const String profileEmptyIcon = 'assets/icons/User empty icon.svg';
+  static const String profileSelectedIcon = 'assets/icons/profile selected icon.svg';
+  static const String calenderEmptyIcon = 'assets/icons/calender icon.svg';
+  static const String calenderSelectedIcon = 'assets/icons/calender selected icon.svg';
+
+// Home Tab Icons
+  static const String doctorCategoriesIcon = 'assets/icons/cat doctors icon.svg';
+  static const String pharmacyCategoriesIcon = 'assets/icons/cat pharmacy icon.svg';
+  static const String recordCategoriesIcon = 'assets/icons/cat record icon.svg';
+  static const String favoriteCategoriesIcon = 'assets/icons/cat favorite icon.svg';
+  static const String specialtiesCategoriesIcon = 'assets/icons/cat specialties icon.svg';
+  static const String dotIcon = 'assets/icons/dot icon.svg';
+
+
+
   // Settings Icons
-  static const String settings = 'assets/icons/settings.svg';
+
   static const String gear = 'assets/icons/gear.svg';
   static const String globe = 'assets/icons/globe.svg';
   static const String camera = 'assets/icons/camera.svg';
@@ -82,7 +107,7 @@ class AppIcons {
   
   // Medical Specialty Icons
   static const String generalMedicine = 'assets/icons/general_medicine.svg';
-  static const String cardiology = 'assets/icons/cardiology.svg';
+  static const String cardiology = 'assets/icons/Icon-cardiology-Small.svg';
   static const String dermatology = 'assets/icons/dermatology.svg';
   static const String ophthalmology = 'assets/icons/ophthalmology.svg';
   static const String orthopedics = 'assets/icons/orthopedics.svg';

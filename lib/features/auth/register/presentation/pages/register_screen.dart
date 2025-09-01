@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +21,7 @@ class RegisterScreen extends StatelessWidget {
         appBar: CustomAppBar.appBar(AppStrings.newAccount),
         body: Padding(
           padding: REdgeInsets.symmetric(
-            horizontal: AppDimensions.paddingLarge,
+            horizontal: AppDimensions.padding24,
           ),
           child: SingleChildScrollView(
             child: Column(

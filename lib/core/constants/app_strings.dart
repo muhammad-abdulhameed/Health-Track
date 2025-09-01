@@ -35,8 +35,28 @@ abstract class AppStrings {
   static const String setPassword = 'Set Password';
   static const String confirmPassword = 'Confirm Password';
   static const String createNewPassword = 'Create New Password';
-
   static const String alreadyHaveAnAccount = 'Already have an account? ';
+  static const String favorite = 'Favorite';
+  static const String doctor = 'Doctor';
+  static const String pharmacy = 'Pharmacy';
+  static const String specialties = 'Specialties';
+  static const String record = 'Record';
+
+  // Main Layout
+  static const String mainLayoutCacheKey = 'mainLayout';
+  static const String welcomeBack = 'Hi, WelcomeBack';
+  static const String userName = 'Jone Doe';
+  static const String home = 'Home';
+  static const String messages = 'Messages';
+  static const String profile = 'Profile';
+  static const String calendar = 'Calendar';
+
+
+  // Home
+  static const String categories = 'Categories';
+  static const String seeAll = 'See All';
+  static const String upcomingAppointment = 'Upcoming Scheduled';
+  static const String upcomingSchedule = 'Upcoming Schedule';
 
 
   // App Information
@@ -49,9 +69,7 @@ abstract class AppStrings {
   static const String appDescription = 'Your personal health companion';
   
   // Navigation
-  static const String home = 'Home';
 
-  static const String profile = 'Profile';
   static const String settings = 'Settings';
   static const String health = 'Health';
   static const String dashboard = 'Dashboard';
@@ -70,6 +88,24 @@ abstract class AppStrings {
   static const String vaccination = 'Vaccination';
   static const String surgery = 'Surgery';
   static const String therapy = 'Therapy';
+  
+  // Weekday Abbreviations
+  static const String monday = 'MON';
+  static const String tuesday = 'TUE';
+  static const String wednesday = 'WED';
+  static const String thursday = 'THU';
+  static const String friday = 'FRI';
+  static const String saturday = 'SAT';
+  static const String sunday = 'SUN';
+  
+  // Full Weekday Names
+  static const String mondayFull = 'Monday';
+  static const String tuesdayFull = 'Tuesday';
+  static const String wednesdayFull = 'Wednesday';
+  static const String thursdayFull = 'Thursday';
+  static const String fridayFull = 'Friday';
+  static const String saturdayFull = 'Saturday';
+  static const String sundayFull = 'Sunday';
   
   // Medical Specialties
   static const String cardiology = 'Cardiology';
@@ -92,12 +128,19 @@ abstract class AppStrings {
   static const String hours = 'hours';
   static const String days = 'days';
   static const String weeks = 'weeks';
-  static const String months = 'months';
+  static const String months = 'Month';
   static const String years = 'years';
   static const String am = 'AM';
   static const String pm = 'PM';
   static const String uToday = 'Today';
   static const String tomorrow = 'Tomorrow';
+  
+  // Time Formats
+  static const String timeFormatAM = 'am';
+  static const String timeFormatPM = 'pm';
+  
+  // Doctor Titles
+  static const String doctorTitle = 'Dr.';
   
   // Status Messages
   static const String loading = 'Loading...';
