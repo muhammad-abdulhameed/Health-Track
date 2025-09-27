@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar.appBar(AppStrings.login),
+        appBar: CustomAppBar.titleAppBar(AppStrings.login),
         body: Padding(
           padding: REdgeInsets.symmetric(horizontal: AppDimensions.padding32),
           child: SingleChildScrollView(

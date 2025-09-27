@@ -16,7 +16,7 @@ class SetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar.appBar(AppStrings.setPassword),
+        appBar: CustomAppBar.titleAppBar(AppStrings.setPassword),
         body: Padding(
           padding: REdgeInsets.symmetric(horizontal: AppDimensions.padding32),
           child: SingleChildScrollView(

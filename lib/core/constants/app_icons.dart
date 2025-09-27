@@ -32,7 +32,7 @@ class AppIcons {
   static const String close = 'assets/icons/close.svg';
   static const String arrowLeft = 'assets/icons/arrow_left.svg';
   static const String arrowRight = 'assets/icons/arrow_right.svg';
-  static const String arrowDown = 'assets/icons/arrow_down.svg';
+  static const String arrowDown = 'assets/icons/arrow down icon.svg';
   static const String arrowUp = 'assets/icons/arrow_up.svg';
   
   // Status Icons
@@ -42,6 +42,9 @@ class AppIcons {
   static const String clock = 'assets/icons/clock.svg';
   static const String info = 'assets/icons/info.svg';
   static const String question = 'assets/icons/question.svg';
+  static const String alarm = 'assets/icons/alarm icon small.svg';
+  static const String professional = 'assets/icons/proffsional icon.svg';
+
 
   // Communication Icons
   static const String chat = 'assets/icons/chat.svg';
@@ -108,7 +111,7 @@ class AppIcons {
   // Medical Specialty Icons
   static const String generalMedicine = 'assets/icons/general_medicine.svg';
   static const String cardiology = 'assets/icons/Icon-cardiology-Small.svg';
-  static const String dermatology = 'assets/icons/dermatology.svg';
+  static const String dermatology = 'assets/icons/Icon-Dermatology-Small.svg';
   static const String ophthalmology = 'assets/icons/ophthalmology.svg';
   static const String orthopedics = 'assets/icons/orthopedics.svg';
   static const String pediatrics = 'assets/icons/pediatrics.svg';
@@ -158,4 +161,8 @@ class AppIcons {
   static const String upload = 'assets/icons/upload.svg';
   static const String refresh = 'assets/icons/refresh.svg';
   static const String sync = 'assets/icons/sync.svg';
+  static const String searchIcon = 'assets/icons/search icon.svg';
+  static const String achievement = 'assets/icons/achivement icon.svg';
+
+
 } 

@@ -9,4 +9,6 @@ abstract class AppImages{
   // main layout images
   static const String profilePlaceholder = '${baseUrl}Perfil.png';
 
+  static const String doctor1 = '${baseUrl}Dr. Daniel.png';
+
 }

@@ -3,11 +3,16 @@ import 'package:health_track/features/app_entry/welcome/presentation/pages/welco
 import 'package:health_track/features/auth/login/presentation/pages/login_screen.dart';
 import 'package:health_track/features/auth/register/presentation/pages/register_screen.dart';
 import 'package:health_track/features/auth/set_password/presentation/pages/set_password_screen.dart';
+import 'package:health_track/features/doctors/presentation/pages/doctor_info_screen.dart';
+import 'package:health_track/features/doctors/presentation/pages/doctors_screen.dart';
+import 'package:health_track/features/doctors/presentation/pages/top_rating_doctors_screen.dart';
+import 'package:health_track/features/favorites/presentation/pages/favorite_screen.dart';
 import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
 
 
 import '../../features/app_entry/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
 import '../../features/app_entry/onBoarding/presentation/pages/on_boarding_screen.dart';
+import '../../features/specialties/presentation/pages/specialties-screen.dart';
 
 abstract class AppRoutes {
   static const String splash = '/splash';
@@ -17,12 +22,13 @@ abstract class AppRoutes {
   static const String register = '/register';
   static const String setPassword = '/setPassword';
   static const String mainLayout = '/mainLayout';
-  static const String productDetails = '/productDetails';
-  static const String popularProducts = '/popularProducts';
+  static const String specialties = '/specialties';
   static const String categories = '/categories';
-  static const String bestForYou = '/bestForYou';
-  static const String buyAgain = '/buyAgain';
-  static const String brands = '/brands';
+  static const String doctors = '/doctors';
+  static const String doctorInfo = '/doctorInfo';
+  static const String topRating = '/topRating';
+  static const String favorites = '/favorites';
+
 }
 final GoRouter appRouter = GoRouter(
 
@@ -57,6 +63,33 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.mainLayout,
       name: AppRoutes.mainLayout,
       builder: (context, state) => MainLayout(),
+    ),
+    GoRoute(
+      path: AppRoutes.specialties,
+      name: AppRoutes.specialties,
+      builder: (context, state) => SpecialtiesScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.doctors,
+      name: AppRoutes.doctors,
+      builder: (context, state) {
+        final String? specialty = state.extra as String? ;
+        return DoctorsScreen(specialty: specialty,);}
+    ),
+    GoRoute(
+      path: AppRoutes.doctorInfo,
+      name: AppRoutes.doctorInfo,
+      builder: (context, state) => DoctorInfoScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.topRating,
+      name: AppRoutes.topRating,
+      builder: (context, state) => TopRatingDoctorsScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.favorites,
+      name: AppRoutes.favorites,
+      builder: (context, state) => FavoriteScreen(),
     ),
     /*
     GoRoute(
