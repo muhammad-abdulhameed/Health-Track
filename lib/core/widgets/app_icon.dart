@@ -15,6 +15,8 @@ class AppIcon extends StatelessWidget {
   final bool isSquare;
   final double? borderRadius;
   final BoxBorder? border;
+  final double? width;
+  final double? height;
 
   const AppIcon({
     super.key,
@@ -27,7 +29,7 @@ class AppIcon extends StatelessWidget {
     this.isCircular = false,
     this.isSquare = false,
     this.borderRadius,
-    this.border,
+    this.border, this.width, this.height,
   });
 
   const AppIcon.circular({
@@ -38,7 +40,7 @@ class AppIcon extends StatelessWidget {
     this.backgroundColor,
     this.padding,
     this.onTap,
-    this.border,
+    this.border, this.width, this.height,
   })  : isCircular = true,
         isSquare = false,
         borderRadius = null;
@@ -52,18 +54,20 @@ class AppIcon extends StatelessWidget {
     this.padding,
     this.onTap,
     this.borderRadius,
-    this.border,
+    this.border, this.width, this.height,
   })  : isCircular = false,
         isSquare = true;
 
   @override
   Widget build(BuildContext context) {
+    final iconWidth = width ?? AppDimensions.iconSize40;
+    final iconHeight = height ?? AppDimensions.iconSize40;
     final iconSize = size ?? AppDimensions.iconSize40;
     final iconColor = color ?? Colors.white;
     final bgColor = backgroundColor ?? AppColors.primary;
     final iconPadding = padding ?? EdgeInsets.zero;
 
-    Widget iconWidget = _buildIconWidget(iconSize, iconColor);
+    Widget iconWidget = _buildIconWidget(iconSize, iconColor,width: iconWidth,height: iconHeight);
 
     if (onTap != null) {
       iconWidget = GestureDetector(
@@ -115,12 +119,12 @@ class AppIcon extends StatelessWidget {
     );
   }
 
-  Widget _buildIconWidget(double size, Color color) {
+  Widget _buildIconWidget(double size, Color color,{double width=24, double height =30}) {
     if (iconPath.endsWith('.svg')) {
       return SvgPicture.asset(
         iconPath,
-        width: AppDimensions.iconSize24,
-        height: AppDimensions.iconSize24,
+        width:width.w ,
+        height: height.h,
         colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
       );
     } else if (iconPath.startsWith('Icons.')) {
@@ -287,8 +291,10 @@ class AppIconStyles {
   // Square icon buttons with text (like the specialty buttons in Figma)
   static Widget squareSpecialty({
     required String iconPath,
-    required String label,
-    double size = AppDimensions.iconSize40,
+     String? label,
+    double iconWidth = 60,
+    double iconHeight = 50,
+    /*double size = AppDimensions.iconSize40,*/
     Color? color,
     VoidCallback? onTap,
     bool isSelected = false,
@@ -296,11 +302,11 @@ class AppIconStyles {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: size + AppDimensions.padding24 * 2,
-        height: size + AppDimensions.padding24 * 2 + 40, // Extra height for text
+        width: 60.w/*size + AppDimensions.padding24 * 2,*/,
+        height: 50.h,/*size + AppDimensions.padding24 * 2 + 40,*/ // Extra height for text
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: AppColors.mainGradient,),
-          borderRadius: BorderRadius.circular(AppDimensions.radius12),
+          borderRadius: BorderRadius.circular(AppDimensions.radius20.r),
           border: isSelected 
             ? Border.all(color: Colors.white, width: 2)
             : null,
@@ -311,10 +317,13 @@ class AppIconStyles {
           children: [
             AppIcon(
               iconPath: iconPath,
-              size: size,
+              /*size: 130*150,*/
+              height: iconHeight.h,
+              width: iconWidth.w,
               color: Colors.white,
             ),
-            const SizedBox(height: AppDimensions.padding8),
+             SizedBox(height: AppDimensions.padding8.h),
+            if(label!=null)
             Text(
               label,
               style: AppStyles.caption.copyWith(fontSize: 16.sp,

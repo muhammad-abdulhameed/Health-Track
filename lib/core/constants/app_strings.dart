@@ -38,9 +38,15 @@ abstract class AppStrings {
   static const String alreadyHaveAnAccount = 'Already have an account? ';
   static const String favorite = 'Favorite';
   static const String doctor = 'Doctor';
+  static const String doctors = 'Doctors';
   static const String pharmacy = 'Pharmacy';
   static const String specialties = 'Specialties';
   static const String record = 'Record';
+  static const String rating = 'Rating';
+  static const String professionalDoctor = 'Professional Doctor';
+  static const String services = 'Services';
+  static const String makeAppointment = 'Make Appointment';
+
 
   // Main Layout
   static const String mainLayoutCacheKey = 'mainLayout';
@@ -50,6 +56,8 @@ abstract class AppStrings {
   static const String messages = 'Messages';
   static const String profile = 'Profile';
   static const String calendar = 'Calendar';
+  static const String careerPath = 'Career Path';
+  static const String highlights = 'Highlights';
 
 
   // Home
@@ -57,6 +65,7 @@ abstract class AppStrings {
   static const String seeAll = 'See All';
   static const String upcomingAppointment = 'Upcoming Scheduled';
   static const String upcomingSchedule = 'Upcoming Schedule';
+  static const String schedule = 'Schedule';
 
 
   // App Information
@@ -202,6 +211,10 @@ abstract class AppStrings {
   static const String previous = 'Previous';
   static const String skip = 'Skip';
   static const String done = 'Done';
+  static const String sortBy = 'Sort By:';
+  static const String filter = 'Filter';
+  static const String topRating = 'Top Rating';
+
   
 
 
@@ -220,6 +233,7 @@ abstract class AppStrings {
   static const String allergies = 'Allergies';
   static const String medicalHistory = 'Medical History';
   static const String currentMedications = 'Current Medications';
+  static const String info = 'Info';
   
   // Settings
   static const String accountSettings = 'Account Settings';
