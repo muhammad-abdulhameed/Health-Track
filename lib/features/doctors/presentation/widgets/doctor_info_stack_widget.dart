@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:health_track/core/reusable_componants/gradient_container_widget.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_dimensions.dart';
@@ -8,27 +9,15 @@ import '../../../../core/constants/app_icons.dart';
 import '../../../../core/reusable_componants/semi_circural_container.dart';
 import 'info_doctor_card_widget.dart';
 
-class DoctorInfoContainerWidget extends StatelessWidget {
-  const DoctorInfoContainerWidget({super.key});
-
+class DoctorInfoStackWidget extends StatelessWidget {
+  const DoctorInfoStackWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Column(
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: AppDimensions.padding32.w,
-                vertical: AppDimensions.padding32.h,
-              ),
-              height: AppDimensions.doctorInfoCardHeight.h,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: AppColors.mainGradient),
-              ),
-              child: InfoDoctorCardWidget(),
-            ),
+            GradientContainerWidget(child: InfoDoctorCardWidget()),
             Container(
               height: 50,
               width: double.infinity,

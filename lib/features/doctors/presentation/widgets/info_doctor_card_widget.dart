@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:health_track/core/reusable_componants/semi_circural_container.dart';
-import 'package:health_track/features/doctors/presentation/widgets/doc_image_widget.dart';
 import 'package:health_track/features/doctors/presentation/widgets/doc_name_and_spcialization_widget.dart';
 import 'package:health_track/features/doctors/presentation/widgets/doc_rate_widget.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_dimensions.dart';
+import '../../../../core/reusable_componants/profile_image_widget.dart';
 
 
 class InfoDoctorCardWidget extends StatelessWidget {
@@ -19,13 +19,13 @@ class InfoDoctorCardWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
 
-DocImageWidget(),
+ProfileImageWidget(),
         Flexible(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              DocNameAndSpcializationWidget(isInfo: true,),
+              DocNameAndSpcializationWidget(),
               SizedBox(height: AppDimensions.sizedBox4.h,),
               SizedBox(
                 height: AppDimensions.sizedBox32.h,

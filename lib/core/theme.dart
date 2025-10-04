@@ -148,8 +148,8 @@ class AppTheme {
           color: AppColors.textPrimary,
         ),
         displayMedium: TextStyle(
-          fontSize: AppDimensions.padding32.sp,
-          fontWeight: FontWeight.bold,
+          fontSize: AppDimensions.fontSize20.sp,
+          fontWeight: FontWeight.w500,
           color: AppColors.textPrimary,
         ),
         headlineLarge:  TextStyle(

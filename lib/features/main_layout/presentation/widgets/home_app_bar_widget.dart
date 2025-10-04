@@ -29,7 +29,7 @@ class HomeAppBarWidget extends StatelessWidget {
           InkWell(
             onTap: () {},
             child: SvgPicture.asset(
-              AppIcons.settings,
+              AppIcons.settingsEmpty,
               height: AppDimensions.iconSize30.h,
               width: AppDimensions.iconSize30.w,
             ),

@@ -6,6 +6,7 @@ import 'package:health_track/core/constants/app_images.dart';
 import 'package:health_track/core/core.dart';
 import 'package:health_track/features/main_layout/presentation/widgets/home_app_bar_widget.dart';
 import 'package:health_track/features/taps/home_tap/presentation/pages/home_tap.dart';
+import 'package:health_track/features/taps/profile_tap/presentation/pages/profile_tap.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_icons.dart';
@@ -24,7 +25,7 @@ class _MainLayoutState extends State<MainLayout> {
     // Add your pages here
     HomeTap(), // Placeholder for Home
     Container(color: Colors.blue), // Placeholder for Messages
-    Container(color: Colors.green), // Placeholder for Profile
+    ProfileTap(), // Placeholder for Profile
     Container(color: Colors.yellow), // Placeholder for Calendar
   ];
 
