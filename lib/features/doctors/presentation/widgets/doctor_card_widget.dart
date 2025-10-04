@@ -6,7 +6,7 @@ import 'package:health_track/features/doctors/presentation/widgets/doc_name_and_
 
 import '../../../../core/constants/app_dimensions.dart';
 
-import 'doc_image_widget.dart';
+import '../../../../core/reusable_componants/profile_image_widget.dart';
 import 'doctor_card_actions_widget.dart';
 import 'doctor_info_btn_widget.dart';
 
@@ -20,13 +20,13 @@ class DoctorCardWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        DocImageWidget(),
+        ProfileImageWidget(),
         Flexible(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              DocNameAndSpcializationWidget(),
+              DocNameAndSpcializationWidget(isDocCard: true,),
               SizedBox(height: AppDimensions.sizedBox19.h),
               Row(
                 mainAxisSize: MainAxisSize.max,

@@ -16,12 +16,11 @@ class CustomAppBar {
 
   static PreferredSizeWidget titleAppBar(String title) => AppBar(
     toolbarHeight: 70.h,
-    title: Text(title),
+    title: Text(title, style: TextStyle(fontWeight: FontWeight.w600)),
     flexibleSpace: Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+
           colors: AppColors.mainGradient,
         ),
       ),
@@ -30,7 +29,6 @@ class CustomAppBar {
 
   static SliverAppBar searchAppBar(String title) => SliverAppBar(
     floating: true,
-
     bottom: PreferredSize(
       preferredSize: Size.fromHeight(100.h),
       child: Padding(
@@ -92,7 +90,6 @@ class CustomAppBar {
     toolbarHeight: 70.h,
     centerTitle: false,
     leading: IconButton(onPressed: (){
-
        Navigator.pop(context);
     },icon:Icon(Icons.arrow_back_ios, size: AppDimensions.iconSize24.sp,)),
     title: Row(

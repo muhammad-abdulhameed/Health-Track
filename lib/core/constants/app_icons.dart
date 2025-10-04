@@ -72,12 +72,14 @@ class AppIcons {
 
   // main layout Icons
   static const String messages = 'assets/icons/messages.svg';
-  static const String favorites = 'assets/icons/favorites.svg';
-  static const String profile = 'assets/icons/Perfil.svg';
+  static const String privacy = 'assets/icons/Privacy Icon.svg';
+  static const String favorites = 'assets/icons/favorite Icon.svg';
+  static const String profile = 'assets/icons/profile.svg';
   static const String editProfile = 'assets/icons/edit icon.svg';
   static const String search = 'assets/icons/Search.svg';
   static const String notifications = 'assets/icons/Notifications.svg';
-  static const String settings = 'assets/icons/Settigns.svg';
+  static const String settingsEmpty = 'assets/icons/Settigns.svg';
+  static const String settings = 'assets/icons/Setting Icon.svg';
   static const String homeEmptyIcon = 'assets/icons/Home empty icon.svg';
   static const String homeSelectedIcon = 'assets/icons/home selected icon.svg';
   static const String messageEmptyIcon = 'assets/icons/meesages icon.svg';
@@ -105,7 +107,7 @@ class AppIcons {
   
   // Payment Icons
   static const String creditCard = 'assets/icons/credit_card.svg';
-  static const String paypal = 'assets/icons/paypal.svg';
+  static const String payment = 'assets/icons/payment Icon.svg';
   static const String wallet = 'assets/icons/wallet.svg';
   
   // Medical Specialty Icons
@@ -161,6 +163,8 @@ class AppIcons {
   static const String upload = 'assets/icons/upload.svg';
   static const String refresh = 'assets/icons/refresh.svg';
   static const String sync = 'assets/icons/sync.svg';
+  static const String help = 'assets/icons/Questions Icon.svg';
+  static const String logOut = 'assets/icons/Log Out icon.svg';
   static const String searchIcon = 'assets/icons/search icon.svg';
   static const String achievement = 'assets/icons/achivement icon.svg';
 

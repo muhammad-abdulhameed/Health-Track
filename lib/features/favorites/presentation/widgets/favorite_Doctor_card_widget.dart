@@ -6,7 +6,7 @@ import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/semi_circural_container.dart';
 
 import '../../../../core/constants/app_dimensions.dart';
-import '../../../doctors/presentation/widgets/doc_image_widget.dart';
+import '../../../../core/reusable_componants/profile_image_widget.dart';
 import '../../../doctors/presentation/widgets/doc_name_and_spcialization_widget.dart';
 import '../../../doctors/presentation/widgets/professional_doc_widget.dart';
 
@@ -19,7 +19,7 @@ class FavoriteDoctorCardWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
 
-        DocImageWidget(isRating: true,),
+        ProfileImageWidget(isRating: true,),
 
         Flexible(
           child: Column(

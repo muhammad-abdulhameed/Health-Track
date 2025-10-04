@@ -7,7 +7,7 @@ import 'package:health_track/features/doctors/presentation/widgets/professional_
 
 import '../../../../core/constants/app_dimensions.dart';
 import '../../../../core/constants/app_icons.dart';
-import 'doc_image_widget.dart';
+import '../../../../core/reusable_componants/profile_image_widget.dart';
 import 'doc_name_and_spcialization_widget.dart';
 import 'doctor_card_actions_widget.dart';
 import 'doctor_info_btn_widget.dart';
@@ -21,7 +21,7 @@ class RatingDoctorCardWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
 
-        DocImageWidget(isRating: true,),
+        ProfileImageWidget(isRating: true,),
 
         Flexible(
           child: Column(

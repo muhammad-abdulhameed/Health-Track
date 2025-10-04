@@ -55,6 +55,7 @@ abstract class AppStrings {
   static const String home = 'Home';
   static const String messages = 'Messages';
   static const String profile = 'Profile';
+  static const String myProfile = 'My Profile';
   static const String calendar = 'Calendar';
   static const String careerPath = 'Career Path';
   static const String highlights = 'Highlights';
@@ -238,6 +239,8 @@ abstract class AppStrings {
   // Settings
   static const String accountSettings = 'Account Settings';
   static const String privacySettings = 'Privacy Settings';
+  static const String privacyPolicy = 'Privacy Policy';
+  static const String paymentMethod = 'Payment Method';
   static const String notificationSettings = 'Notification Settings';
   static const String dataSettings = 'Data Settings';
   static const String about = 'About';
