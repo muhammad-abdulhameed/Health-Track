@@ -7,28 +7,16 @@ import '../../../../../core/constants/app_dimensions.dart';
 import '../../../../../core/constants/app_icons.dart';
 import '../../../../../core/reusable_componants/profile_image_widget.dart';
 
-class ProfileCardWidget extends StatelessWidget {
-  const ProfileCardWidget({super.key});
+class ProfileInfoCardWidget extends StatelessWidget {
+  const ProfileInfoCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Stack(
-          children: [
-            ProfileImageWidget(),
-            Positioned(
-              top: 75.h,
-              right: 12.w,
-              child: SvgPicture.asset(
-                AppIcons.editProfile,
-                height: AppDimensions.iconSize30.h,
-                width: AppDimensions.iconSize40.w,
-              ),
-            ),
-          ],
-        ),
+        ProfileImageWidget(enableEdit: true,),
+        SizedBox(width: AppDimensions.sizedBox12.w,),
         DocNameAndSpcializationWidget(phone: "0100255454",)
       ],
     );

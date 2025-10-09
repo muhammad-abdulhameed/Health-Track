@@ -24,25 +24,27 @@ class RatingDoctorCardWidget extends StatelessWidget {
         ProfileImageWidget(isRating: true,),
 
         Flexible(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ProfessionalDocWidget(),
-              DocNameAndSpcializationWidget(),
-              SizedBox(height: AppDimensions.sizedBox10.h),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-
-                children: [
-                  DoctorInfoBtnWidget(),
-                  SizedBox(width: 5.w,),
-                  DocRateWidget(),
-                  Spacer(),
-                  DoctorCardActionsWidget(),
-                ],
-              ),
-            ],
+          child: SizedBox(
+            height: 95.h,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ProfessionalDocWidget(),
+                DocNameAndSpcializationWidget(isDocCard: true,),
+                SizedBox(height: AppDimensions.sizedBox10.h),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    DoctorInfoBtnWidget(),
+                    SizedBox(width: 5.w,),
+                    DocRateWidget(),
+                    Spacer(),
+                    DoctorCardActionsWidget(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ],

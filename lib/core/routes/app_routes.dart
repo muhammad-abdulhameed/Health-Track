@@ -6,6 +6,7 @@ import 'package:health_track/features/auth/set_password/presentation/pages/set_p
 import 'package:health_track/features/doctors/presentation/pages/doctor_info_screen.dart';
 import 'package:health_track/features/doctors/presentation/pages/doctors_screen.dart';
 import 'package:health_track/features/doctors/presentation/pages/top_rating_doctors_screen.dart';
+import 'package:health_track/features/edit_profile/presentation/pages/edit_profile_screen.dart';
 import 'package:health_track/features/favorites/presentation/pages/favorite_screen.dart';
 import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
 
@@ -28,6 +29,14 @@ abstract class AppRoutes {
   static const String doctorInfo = '/doctorInfo';
   static const String topRating = '/topRating';
   static const String favorites = '/favorites';
+  static const String editProfile = '/editProfile';
+  static const String changePassword = '/changePassword';
+  static const String notifications = '/notifications';
+  static const String appointments = '/appointments';
+  static const String settings = '/settings';
+  static const String help = '/help';
+  static const String paymentMethod = '/aboutUs';
+  static const String privacyPolicy = '/privacyPolicy';
 
 }
 final GoRouter appRouter = GoRouter(
@@ -86,10 +95,16 @@ final GoRouter appRouter = GoRouter(
       name: AppRoutes.topRating,
       builder: (context, state) => TopRatingDoctorsScreen(),
     ),
+
     GoRoute(
       path: AppRoutes.favorites,
       name: AppRoutes.favorites,
       builder: (context, state) => FavoriteScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.editProfile,
+      name: AppRoutes.editProfile,
+      builder: (context, state) => EditProfileScreen(),
     ),
     /*
     GoRoute(
