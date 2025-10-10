@@ -6,8 +6,6 @@ import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/reusable_componants/customElevatedBtn.dart';
 import '../../../../../core/reusable_componants/custom_app_bar.dart';
 import '../../../../../core/reusable_componants/custom_text_form_field.dart';
-import '../../../login/presentation/widgets/auth_methods_widget.dart';
-import '../../../login/presentation/widgets/choose_login_or_sign_up_widget.dart';
 
 class SetPasswordScreen extends StatelessWidget {
   const SetPasswordScreen({super.key});
@@ -16,7 +14,7 @@ class SetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar.titleAppBar(AppStrings.setPassword),
+        appBar: CustomAppBar.titleAppBar(AppStrings.setPassword,context),
         body: Padding(
           padding: REdgeInsets.symmetric(horizontal: AppDimensions.padding32),
           child: SingleChildScrollView(

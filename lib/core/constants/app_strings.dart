@@ -20,6 +20,7 @@ abstract class AppStrings {
   static const String emailOrMobilePhone = 'Email or Mobile Phone';
   static const String emailHint = 'email@gmail.com';
   static const String password = 'Password';
+  static const String passwordManger = 'Password Manager';
   static const String passwordObs = '************';
   static const String forgetPassword = 'Forget Password?';
   static const String orSignUpWith = 'or sign up with';
@@ -200,6 +201,7 @@ abstract class AppStrings {
   static const String add = 'Add';
   static const String edit = 'Edit';
   static const String delete = 'Delete';
+  static const String deleteAccount = 'Delete Account';
   static const String save = 'Save';
   static const String cancel = 'Cancel';
   static const String confirm = 'Confirm';
@@ -242,6 +244,20 @@ abstract class AppStrings {
   static const String privacyPolicy = 'Privacy Policy';
   static const String paymentMethod = 'Payment Method';
   static const String notificationSettings = 'Notification Settings';
+  static const String generalNotification = 'General Notifications';
+  static const String sound = 'Sound';
+  static const String soundCall = 'Sound Call';
+  static const String vibration = 'Vibration';
+  static const String specialOffers = 'Special Offers';
+  static const String promoAndDiscounts = 'Promos & Discounts';
+  static const String payments = 'Payments';
+  static const String cashBack = 'CashBack';
+  static const String currentPassword = 'Current Password';
+  static const String newPassword = 'New Password';
+  static const String confirmNewPassword = 'Confirm New Password';
+  static const String termsAndConditions = 'Terms & Conditions';
+
+
   static const String dataSettings = 'Data Settings';
   static const String about = 'About';
   static const String help = 'Help';

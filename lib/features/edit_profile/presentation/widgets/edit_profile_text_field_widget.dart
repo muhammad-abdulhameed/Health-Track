@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_dimensions.dart';
-import '../../../../core/constants/app_strings.dart';
 
 class EditProfileTextFieldWidget extends StatefulWidget {
   const EditProfileTextFieldWidget({super.key, required this.fieldTitle});

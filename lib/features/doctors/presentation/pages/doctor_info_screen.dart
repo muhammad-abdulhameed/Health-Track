@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/custom_app_bar.dart';

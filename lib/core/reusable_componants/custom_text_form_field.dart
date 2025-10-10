@@ -6,10 +6,10 @@ import '../constants/app_dimensions.dart';
 import '../constants/app_strings.dart';
 
 class CustomTextFormField extends StatefulWidget {
-   CustomTextFormField({super.key,required this.hintText,required this.textInputType, this.obscureText=false});
+   CustomTextFormField({super.key,required this.hintText, this.textInputType, this.obscureText=false});
   final String? hintText;
    bool obscureText;
-   TextInputType textInputType;
+   TextInputType? textInputType;
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }

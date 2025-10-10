@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_track/core/constants/app_icons.dart';
-import 'package:health_track/features/taps/home_tap/presentation/widgets/schedual_date_widget.dart';
 import 'package:health_track/features/taps/home_tap/presentation/widgets/schedual_dates_list_view_widget.dart';
 
 import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/constants/app_dimensions.dart';
 import '../../../../../core/constants/app_strings.dart';
-import '../../../../../core/reusable_componants/custom_scroll_physics.dart';
 
 class UpcomingScheduleWidget extends StatefulWidget {
   const UpcomingScheduleWidget({super.key});

@@ -215,7 +215,7 @@ class AppTheme {
         thickness: AppDimensions.dividerThickness,
         space: AppDimensions.marginMedium,
       ),
-    );
+     );
   }
 
   static ThemeData get darkTheme {

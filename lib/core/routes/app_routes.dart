@@ -9,10 +9,12 @@ import 'package:health_track/features/doctors/presentation/pages/top_rating_doct
 import 'package:health_track/features/edit_profile/presentation/pages/edit_profile_screen.dart';
 import 'package:health_track/features/favorites/presentation/pages/favorite_screen.dart';
 import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
-
-
+import 'package:health_track/features/settings/presentation/pages/password_manger_screen.dart';
+import 'package:health_track/features/settings/presentation/pages/privacy_policy_screen.dart';
+import 'package:health_track/features/settings/presentation/pages/settings_screen.dart';
 import '../../features/app_entry/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
 import '../../features/app_entry/onBoarding/presentation/pages/on_boarding_screen.dart';
+import '../../features/settings/presentation/pages/notification_setting_screen.dart';
 import '../../features/specialties/presentation/pages/specialties-screen.dart';
 
 abstract class AppRoutes {
@@ -30,8 +32,8 @@ abstract class AppRoutes {
   static const String topRating = '/topRating';
   static const String favorites = '/favorites';
   static const String editProfile = '/editProfile';
-  static const String changePassword = '/changePassword';
-  static const String notifications = '/notifications';
+  static const String passwordManger = '/passwordManger';
+  static const String notificationsSettings = '/notificationsSettings';
   static const String appointments = '/appointments';
   static const String settings = '/settings';
   static const String help = '/help';
@@ -105,6 +107,26 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.editProfile,
       name: AppRoutes.editProfile,
       builder: (context, state) => EditProfileScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.settings,
+      name: AppRoutes.settings,
+      builder: (context, state) => SettingsScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.notificationsSettings,
+      name: AppRoutes.notificationsSettings,
+      builder: (context, state) => NotificationSetting(),
+    ),
+    GoRoute(
+      path: AppRoutes.passwordManger,
+      name: AppRoutes.passwordManger,
+      builder: (context, state) => PasswordMangerScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.privacyPolicy,
+      name: AppRoutes.privacyPolicy,
+      builder: (context, state) => PrivacyPolicyScreen(),
     ),
     /*
     GoRoute(

@@ -16,7 +16,7 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar.titleAppBar(AppStrings.favorite),
+        appBar: CustomAppBar.titleAppBar(AppStrings.favorite,context),
         body: BlocProvider<FavoriteCubit>(
           create: (BuildContext context) =>getIt.get<FavoriteCubit>(),
           child: DefaultTabController(

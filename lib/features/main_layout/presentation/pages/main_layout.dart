@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:health_track/core/constants/app_dimensions.dart';
-import 'package:health_track/core/constants/app_images.dart';
 import 'package:health_track/core/core.dart';
-import 'package:health_track/features/main_layout/presentation/widgets/home_app_bar_widget.dart';
 import 'package:health_track/features/taps/home_tap/presentation/pages/home_tap.dart';
 import 'package:health_track/features/taps/profile_tap/presentation/pages/profile_tap.dart';
 
-import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/app_icons.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});

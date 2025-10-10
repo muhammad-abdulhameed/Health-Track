@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_icons.dart';
 import 'package:health_track/core/constants/app_strings.dart';
@@ -8,7 +7,6 @@ import 'package:health_track/core/reusable_componants/custom_app_bar.dart';
 import 'package:health_track/core/reusable_componants/gradient_container_widget.dart';
 import 'package:health_track/core/routes/app_routes.dart';
 import 'package:health_track/features/taps/profile_tap/domain/entity/profile_tap_enity.dart';
-import '../../../../../core/constants/app_colors.dart';
 import '../widgets/profile_info_card_widget.dart';
 import '../widgets/profile_tap_widget.dart';
 
@@ -29,7 +27,7 @@ final List<ProfileTapEntity> profileTapList = [
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar.titleAppBar(AppStrings.myProfile,),
+      appBar: CustomAppBar.titleAppBar(AppStrings.myProfile,context),
       body: Column(
           children: [
        GradientContainerWidget(child: ProfileInfoCardWidget()),

@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,8 +5,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/constants/app_dimensions.dart';
-import '../../../../../core/constants/app_icons.dart';
-import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/reusable_componants/shader.dart';
 
 class CategoryItemWidget extends StatelessWidget {

@@ -55,6 +55,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   injectable:
   get_it:
+  flutter_switch: ^0.3.2
 
 
 dev_dependencies:

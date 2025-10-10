@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/constants/app_dimensions.dart';
-import '../../../../../core/constants/app_icons.dart';
 import '../../../../../core/constants/app_strings.dart';
 
 class ProfileTapWidget extends StatelessWidget {

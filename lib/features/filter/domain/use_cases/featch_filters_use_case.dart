@@ -5,7 +5,7 @@ import '../reposoitory/filter_repository.dart';
 
 @injectable
 class FetchFiltersUseCase {
-  FilterRepository _filterRepository;
+  final FilterRepository _filterRepository;
   @factoryMethod
   FetchFiltersUseCase(this._filterRepository);
   List<FilterCategoryItemEntity>call()=>_filterRepository.fetchFilters();

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:health_track/core/reusable_componants/shader.dart';
 
 import '../constants/app_dimensions.dart';
 
