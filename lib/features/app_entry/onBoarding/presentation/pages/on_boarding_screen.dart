@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/customElevatedBtn.dart';
-import 'package:health_track/core/reusable_componants/shader.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 

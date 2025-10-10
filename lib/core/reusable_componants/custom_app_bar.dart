@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/circle_container.dart';
@@ -14,7 +13,10 @@ import '../constants/app_icons.dart';
 class CustomAppBar {
   CustomAppBar._();
 
-  static PreferredSizeWidget titleAppBar(String title) => AppBar(
+  static PreferredSizeWidget titleAppBar(String title,BuildContext context) => AppBar(
+    leading:  IconButton(onPressed: (){
+      Navigator.pop(context);
+    },icon:Icon(Icons.arrow_back_ios, size: AppDimensions.iconSize24.sp,)),
     toolbarHeight: 70.h,
     title: Text(title, style: TextStyle(fontWeight: FontWeight.w600)),
     flexibleSpace: Container(

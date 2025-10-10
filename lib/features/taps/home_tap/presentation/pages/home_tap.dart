@@ -2,14 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/core.dart';
 import 'package:health_track/features/main_layout/presentation/widgets/home_app_bar_widget.dart';
 import 'package:health_track/features/taps/home_tap/presentation/widgets/categories_list_widget.dart';
 import 'package:health_track/features/taps/home_tap/presentation/widgets/section_header_widget.dart';
-import 'package:health_track/features/taps/home_tap/presentation/widgets/specialties_list_widget.dart';
 
-import '../../../../../core/reusable_componants/shader.dart';
 import '../../../../../core/routes/app_routes.dart';
 import '../widgets/specialties_grid_widget.dart';
 import '../widgets/upcoming_schedule_widget.dart';

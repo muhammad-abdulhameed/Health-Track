@@ -18,7 +18,7 @@ class RegisterScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: true,
-        appBar: CustomAppBar.titleAppBar(AppStrings.newAccount),
+        appBar: CustomAppBar.titleAppBar(AppStrings.newAccount,context),
         body: Padding(
           padding: REdgeInsets.symmetric(
             horizontal: AppDimensions.padding24,

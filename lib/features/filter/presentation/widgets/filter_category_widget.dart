@@ -7,7 +7,6 @@ import 'package:health_track/features/filter/presentation/manger/filter_cubit.da
 
 import '../../../../core/constants/app_dimensions.dart';
 import '../../../../core/constants/app_icons.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../manger/filter_state.dart';
 
 class FilterCategoryWidget extends StatelessWidget {

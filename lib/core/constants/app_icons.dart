@@ -78,6 +78,7 @@ class AppIcons {
   static const String editProfile = 'assets/icons/edit icon.svg';
   static const String search = 'assets/icons/Search.svg';
   static const String notifications = 'assets/icons/Notifications.svg';
+  static const String notificationsSettings = 'assets/icons/notification settings.svg';
   static const String settingsEmpty = 'assets/icons/Settigns.svg';
   static const String settings = 'assets/icons/Setting Icon.svg';
   static const String homeEmptyIcon = 'assets/icons/Home empty icon.svg';
@@ -87,6 +88,7 @@ class AppIcons {
   static const String profileEmptyIcon = 'assets/icons/User empty icon.svg';
   static const String profileSelectedIcon = 'assets/icons/profile selected icon.svg';
   static const String calenderEmptyIcon = 'assets/icons/calender icon.svg';
+  static const String passwordManger = 'assets/icons/password manger.svg';
   static const String calenderSelectedIcon = 'assets/icons/calender selected icon.svg';
 
 // Home Tab Icons

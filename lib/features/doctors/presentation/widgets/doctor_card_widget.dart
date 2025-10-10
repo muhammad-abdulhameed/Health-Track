@@ -12,7 +12,6 @@ import 'doctor_info_btn_widget.dart';
 
 class DoctorCardWidget extends StatelessWidget {
   const DoctorCardWidget({super.key, this.isInfo = false});
-
   final bool isInfo;
 
   @override
@@ -22,22 +21,25 @@ class DoctorCardWidget extends StatelessWidget {
       children: [
         ProfileImageWidget(),
         Flexible(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              DocNameAndSpcializationWidget(isDocCard: true,),
-              SizedBox(height: AppDimensions.sizedBox19.h),
-              Row(
-                mainAxisSize: MainAxisSize.max,
+          child: SizedBox(
+            height: 100.h,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                DocNameAndSpcializationWidget(isDocCard: true,),
+                SizedBox(height: AppDimensions.sizedBox19.h),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
 
-                children: [
-                  DoctorInfoBtnWidget(),
-                  Spacer(),
-                  DoctorCardActionsWidget(),
-                ],
-              ),
-            ],
+                  children: [
+                    DoctorInfoBtnWidget(),
+                    Spacer(),
+                    DoctorCardActionsWidget(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ],

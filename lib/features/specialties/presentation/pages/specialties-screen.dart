@@ -6,7 +6,6 @@ import 'package:health_track/core/constants/app_icons.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/custom_app_bar.dart';
 
-import '../../../../core/constants/app_colors.dart';
 import '../../../../core/routes/app_routes.dart';
 import '../../../../core/widgets/app_icon.dart';
 import '../../../filter/presentation/pages/filter_and_doctors_row_widget.dart';

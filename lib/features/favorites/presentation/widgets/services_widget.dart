@@ -11,7 +11,7 @@ import '../../../../core/constants/app_dimensions.dart';
 import '../../../../core/constants/app_icons.dart';
 
 class ServicesWidget extends StatelessWidget {
-  ServicesWidget({super.key, required this.index});
+  const ServicesWidget({super.key, required this.index});
   final int index;
 
   @override

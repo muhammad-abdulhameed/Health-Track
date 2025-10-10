@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:health_track/core/reusable_componants/semi_circural_container.dart';
 import 'package:health_track/features/doctors/presentation/widgets/doc_name_and_spcialization_widget.dart';
 import 'package:health_track/features/doctors/presentation/widgets/doc_rate_widget.dart';

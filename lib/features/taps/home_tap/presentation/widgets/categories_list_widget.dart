@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:health_track/core/routes/app_routes.dart';
 import 'package:health_track/features/taps/home_tap/presentation/dummy_data/category_item_dummy_data.dart';
 import 'package:health_track/features/taps/home_tap/presentation/widgets/category_item_widget.dart';
@@ -10,7 +9,6 @@ import '../../../../../core/constants/app_colors.dart';
 import '../../../../../core/constants/app_dimensions.dart';
 import '../../../../../core/constants/app_icons.dart';
 import '../../../../../core/constants/app_strings.dart';
-import '../../../../../core/reusable_componants/shader.dart';
 
 class CategoriesListWidget extends StatelessWidget {
    CategoriesListWidget({super.key});

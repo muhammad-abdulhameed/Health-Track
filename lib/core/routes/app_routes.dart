@@ -6,12 +6,15 @@ import 'package:health_track/features/auth/set_password/presentation/pages/set_p
 import 'package:health_track/features/doctors/presentation/pages/doctor_info_screen.dart';
 import 'package:health_track/features/doctors/presentation/pages/doctors_screen.dart';
 import 'package:health_track/features/doctors/presentation/pages/top_rating_doctors_screen.dart';
+import 'package:health_track/features/edit_profile/presentation/pages/edit_profile_screen.dart';
 import 'package:health_track/features/favorites/presentation/pages/favorite_screen.dart';
 import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
-
-
+import 'package:health_track/features/settings/presentation/pages/password_manger_screen.dart';
+import 'package:health_track/features/settings/presentation/pages/privacy_policy_screen.dart';
+import 'package:health_track/features/settings/presentation/pages/settings_screen.dart';
 import '../../features/app_entry/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
 import '../../features/app_entry/onBoarding/presentation/pages/on_boarding_screen.dart';
+import '../../features/settings/presentation/pages/notification_setting_screen.dart';
 import '../../features/specialties/presentation/pages/specialties-screen.dart';
 
 abstract class AppRoutes {
@@ -28,6 +31,14 @@ abstract class AppRoutes {
   static const String doctorInfo = '/doctorInfo';
   static const String topRating = '/topRating';
   static const String favorites = '/favorites';
+  static const String editProfile = '/editProfile';
+  static const String passwordManger = '/passwordManger';
+  static const String notificationsSettings = '/notificationsSettings';
+  static const String appointments = '/appointments';
+  static const String settings = '/settings';
+  static const String help = '/help';
+  static const String paymentMethod = '/aboutUs';
+  static const String privacyPolicy = '/privacyPolicy';
 
 }
 final GoRouter appRouter = GoRouter(
@@ -86,10 +97,36 @@ final GoRouter appRouter = GoRouter(
       name: AppRoutes.topRating,
       builder: (context, state) => TopRatingDoctorsScreen(),
     ),
+
     GoRoute(
       path: AppRoutes.favorites,
       name: AppRoutes.favorites,
       builder: (context, state) => FavoriteScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.editProfile,
+      name: AppRoutes.editProfile,
+      builder: (context, state) => EditProfileScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.settings,
+      name: AppRoutes.settings,
+      builder: (context, state) => SettingsScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.notificationsSettings,
+      name: AppRoutes.notificationsSettings,
+      builder: (context, state) => NotificationSetting(),
+    ),
+    GoRoute(
+      path: AppRoutes.passwordManger,
+      name: AppRoutes.passwordManger,
+      builder: (context, state) => PasswordMangerScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.privacyPolicy,
+      name: AppRoutes.privacyPolicy,
+      builder: (context, state) => PrivacyPolicyScreen(),
     ),
     /*
     GoRoute(

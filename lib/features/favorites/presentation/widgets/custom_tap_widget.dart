@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_dimensions.dart';
-import '../../../../core/constants/app_strings.dart';
 
 class CustomTapWidget extends StatelessWidget {
    CustomTapWidget({super.key, required this.title,this.isSelected=false , this.onTap,});
