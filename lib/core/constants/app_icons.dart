@@ -52,7 +52,11 @@ class AppIcons {
   static const String email = 'assets/icons/email.svg';
   static const String message = 'assets/icons/message.svg';
   static const String audio = 'assets/icons/audio.svg';
-  
+  static const String whtasapp = 'assets/icons/Whatspp Icon.svg';
+  static const String webSite = 'assets/icons/Global Icon.svg';
+  static const String customerService = 'assets/icons/Sound Icon.svg';
+  static const String instagram = 'assets/icons/Picgram Icon.svg';
+
   // File Icons
   static const String folder = 'assets/icons/folder.svg';
   static const String file = 'assets/icons/file.svg';

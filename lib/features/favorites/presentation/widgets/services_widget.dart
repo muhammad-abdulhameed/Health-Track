@@ -30,13 +30,18 @@ class ServicesWidget extends StatelessWidget {
         if (state is FavoriteServiceExpand &&
             state.isExpand &&
             state.index == index) {
-          return DropdownExpandedWidget(index: index, onPressed: () {
-            FavoriteCubit.get(context).showFavoriteService(index,);
-          }, title: AppStrings.cardiology,);
+          return DropdownExpandedWidget(
+            index: index,
+            showIcon: true,
+            onPressed: () {
+              FavoriteCubit.get(context).showFavoriteService(index);
+            },
+            title: AppStrings.cardiology,
+          );
         } else {
           return DropdownCollapsedWidget(
-            onPressed: (){
-              FavoriteCubit.get(context).showFavoriteService(index,);
+            onPressed: () {
+              FavoriteCubit.get(context).showFavoriteService(index);
             },
             index: index,
             title: AppStrings.cardiology,
