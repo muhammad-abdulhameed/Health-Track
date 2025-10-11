@@ -6,120 +6,44 @@ import 'package:health_track/core/constants/app_colors.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/features/favorites/presentation/manager/favorite_cubit.dart';
 import 'package:health_track/features/favorites/presentation/manager/favorite_state.dart';
+import 'package:health_track/features/favorites/presentation/widgets/dropdown_collapsed_widget.dart';
+import 'package:health_track/features/favorites/presentation/widgets/dropdown_expanded_widget.dart';
 
 import '../../../../core/constants/app_dimensions.dart';
 import '../../../../core/constants/app_icons.dart';
 
 class ServicesWidget extends StatelessWidget {
   const ServicesWidget({super.key, required this.index});
+
   final int index;
 
   @override
   Widget build(BuildContext context) {
-
-    return BlocBuilder<FavoriteCubit,FavoriteState>(
+    return BlocBuilder<FavoriteCubit, FavoriteState>(
       buildWhen: (previous, current) {
-        if (current is FavoriteServiceExpand ) {
+        if (current is FavoriteServiceExpand) {
           return true;
         }
         return false;
       },
       builder: (context, state) {
-        if (state is FavoriteServiceExpand && state.isExpand && state.index == index) {
-          return Column(
-            children: [
-              Container(
-                height: 40.h,
-                padding: REdgeInsets.symmetric(horizontal: 0.w, vertical: 0),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: AppColors.mainGradient),
-                  borderRadius: BorderRadius.circular(AppDimensions.radius50.r),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.zero,
-                      icon: Icon(
-                        Icons.favorite,
-                        color: Colors.white,
-                        size: AppDimensions.iconSize24.sp,
-                      ),
-                    ),
-                    Text(AppStrings.cardiology),
-                    Spacer(),
-                    IconButton(
-                      onPressed: () {
-                        FavoriteCubit.get(context).showFavoriteService(index);
-                      },
-                      padding: EdgeInsets.zero,
-                      icon: SvgPicture.asset(AppIcons.arrowDown, height: 10.h),
-                    ),
-                  ],
-                ),
-              ),
-
-              SizedBox(height: AppDimensions.sizedBox51.h),
-              Text(
-                AppStrings.onBoardingDesc2,
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ],
-
+        if (state is FavoriteServiceExpand &&
+            state.isExpand &&
+            state.index == index) {
+          return DropdownExpandedWidget(index: index, onPressed: () {
+            FavoriteCubit.get(context).showFavoriteService(index,);
+          }, title: AppStrings.cardiology,);
+        } else {
+          return DropdownCollapsedWidget(
+            onPressed: (){
+              FavoriteCubit.get(context).showFavoriteService(index,);
+            },
+            index: index,
+            title: AppStrings.cardiology,
+            showIcon: true,
           );
-        }else{
-
-          return Column(
-            children: [
-              Container(
-                height: 40.h,
-                padding: REdgeInsets.symmetric(horizontal: 0.w, vertical: 0),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: AppColors.mainGradient),
-                  borderRadius: BorderRadius.circular(AppDimensions.radius50.r),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.zero,
-                      icon: Icon(
-                        Icons.favorite,
-                        color: Colors.white,
-                        size: AppDimensions.iconSize24.sp,
-                      ),
-                    ),
-                    Text(AppStrings.cardiology),
-                    Spacer(),
-                    IconButton(
-                      onPressed: () {
-                        FavoriteCubit.get(context).showFavoriteService(index,);
-                      },
-                      padding: EdgeInsets.zero,
-                      icon: SvgPicture.asset(AppIcons.arrowDown, height: 10.h),
-                    ),
-                  ],
-                ),
-              ),
-              /*if (state is FavoriteServiceExpand&&state.isExpand&& state.index == index)...[
-                SizedBox(height: AppDimensions.sizedBox51.h),
-                Text(
-                  AppStrings.onBoardingDesc2,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ],*/
-            ],
-          );
-
         }
-        }
-      ,
+      },
     );
   }
 }

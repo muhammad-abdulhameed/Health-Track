@@ -17,7 +17,7 @@ class AllDoctorsBodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        CustomAppBar.searchAppBar(AppStrings.doctors),
+        CustomAppBar.searchAppBar(AppStrings.doctors,AppStrings.findYourDoctor),
 
         SliverPadding(padding: REdgeInsets.only(right:AppDimensions.padding44.w,top: AppDimensions.padding24 ),
           sliver: SliverToBoxAdapter(

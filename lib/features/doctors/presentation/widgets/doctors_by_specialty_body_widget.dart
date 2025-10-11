@@ -14,7 +14,7 @@ final String? specialty;
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        CustomAppBar.searchAppBar(specialty??AppStrings.doctors),
+        CustomAppBar.searchAppBar(specialty??AppStrings.doctors,AppStrings.findYourDoctor),
 
         SliverPadding(
           padding: REdgeInsets.symmetric(

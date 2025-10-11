@@ -29,7 +29,7 @@ class CustomAppBar {
     ),
   );
 
-  static SliverAppBar searchAppBar(String title) => SliverAppBar(
+  static SliverAppBar searchAppBar(String title,String searchTitle) => SliverAppBar(
     floating: true,
     bottom: PreferredSize(
       preferredSize: Size.fromHeight(100.h),
@@ -38,7 +38,7 @@ class CustomAppBar {
         child: Column(
           children: [
             Text(
-              "Find Your Doctor",
+              searchTitle,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 18.sp,

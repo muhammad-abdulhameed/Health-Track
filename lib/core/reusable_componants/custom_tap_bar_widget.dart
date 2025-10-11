@@ -2,27 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_track/features/favorites/presentation/widgets/services_widget.dart';
 
-import '../../../../core/constants/app_dimensions.dart';
-import '../../../../core/constants/app_strings.dart';
-import 'custom_tap_widget.dart';
-import 'favorite_Doctor_card_widget.dart';
+import '../constants/app_dimensions.dart';
+import '../constants/app_strings.dart';
+import '../../features/favorites/presentation/widgets/custom_tap_widget.dart';
+import '../../features/favorites/presentation/widgets/favorite_Doctor_card_widget.dart';
 
-class TapBarWidget extends StatefulWidget {
-  const TapBarWidget({super.key});
-
+class CustomTapBarWidget extends StatefulWidget {
+  const CustomTapBarWidget({super.key, required this.tapsTitle, required this.tapsContent, required this.size});
+ final List<String> tapsTitle;
+ final List<Widget> tapsContent ;
+ final CustomTapSize size;
   @override
-  State<TapBarWidget> createState() => _TapBarWidgetState();
+  State<CustomTapBarWidget> createState() => _CustomTapBarWidgetState();
 }
 
-class _TapBarWidgetState extends State<TapBarWidget>
+class _CustomTapBarWidgetState extends State<CustomTapBarWidget>
     with SingleTickerProviderStateMixin {
   int selectedIndex = 0;
-  List<String> tapsTitle = [AppStrings.doctors, AppStrings.services];
+
+
   late TabController tabController;
 
   @override
   void initState() {
-    tabController = TabController(length: tapsTitle.length, vsync: this);
+    tabController = TabController(length: widget.tapsTitle.length, vsync: this,);
     tabController.addListener(() {
 
 
@@ -45,6 +48,7 @@ class _TapBarWidgetState extends State<TapBarWidget>
     return Column(
       children: [
         TabBar(
+          isScrollable: true,
           controller: tabController,
           indicatorColor: Colors.transparent,
           onTap: (index) {
@@ -58,9 +62,10 @@ class _TapBarWidgetState extends State<TapBarWidget>
           indicatorPadding: EdgeInsets.zero,
 
           tabs: List.generate(
-            tapsTitle.length,
+            widget.tapsTitle.length,
             (index) => CustomTapWidget(
-              title: tapsTitle[index],
+              size: widget.size,
+              title: widget.tapsTitle[index],
               isSelected: index == tabController.index,
               onTap: () {
                 selectedIndex = index;
@@ -76,8 +81,9 @@ class _TapBarWidgetState extends State<TapBarWidget>
             constraints: BoxConstraints(maxHeight: 500.h, minHeight: 100.h),
             child: TabBarView(
               controller: tabController,
-              children: [
-                ListView.separated(
+              children: widget.tapsContent,
+
+               /* ListView.separated(
                   itemBuilder: (context, index) => FavoriteDoctorCardWidget(),
                   scrollDirection: Axis.vertical,
                   separatorBuilder: (_, _) =>
@@ -90,8 +96,8 @@ class _TapBarWidgetState extends State<TapBarWidget>
                   separatorBuilder: (_, _) =>
                       SizedBox(height: AppDimensions.sizedBox12.h),
                   itemCount: 4,
-                ),
-              ],
+                ),*/
+
             ),
           ),
         ),

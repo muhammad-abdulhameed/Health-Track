@@ -21,6 +21,21 @@ import '../../features/filter/domain/reposoitory/filter_repository.dart'
 import '../../features/filter/domain/use_cases/featch_filters_use_case.dart'
     as _i55;
 import '../../features/filter/presentation/manger/filter_cubit.dart' as _i608;
+import '../../features/help_center/data/data_sources/remote/help_center_remote_data_source.dart'
+    as _i451;
+import '../../features/help_center/data/data_sources/remote/help_center_remote_data_source_impl.dart'
+    as _i112;
+import '../../features/help_center/data/repo/help_center_repo_impl.dart'
+    as _i1040;
+import '../../features/help_center/domain/repo/help_center_repo.dart' as _i399;
+import '../../features/help_center/presentation/blocs/help_center_cubit.dart'
+    as _i841;
+import '../../features/settings/data/data_sources/remote/settings_remote_data_source.dart'
+    as _i17;
+import '../../features/settings/data/data_sources/remote/settings_remote_data_source_impl.dart'
+    as _i1038;
+import '../../features/settings/data/repo/settings_repo_impl.dart' as _i812;
+import '../../features/settings/domain/repo/settings_repo.dart' as _i95;
 
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -30,7 +45,16 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     gh.factory<_i430.FavoriteCubit>(() => _i430.FavoriteCubit());
+    gh.factory<_i841.HelpCenterCubit>(() => _i841.HelpCenterCubit());
+    gh.lazySingleton<_i17.SettingsRemoteDataSource>(
+      () => _i1038.SettingsRemoteDataSourceImpl(),
+    );
     gh.factory<_i505.FilterRepository>(() => _i138.FilterRepositoryImpl());
+    gh.lazySingleton<_i399.HelpCenterRepo>(() => _i1040.HelpCenterRepoImpl());
+    gh.lazySingleton<_i451.HelpCenterRemoteDataSource>(
+      () => _i112.HelpCenterRemoteDataSourceImpl(),
+    );
+    gh.lazySingleton<_i95.SettingsRepo>(() => _i812.SettingsRepoImpl());
     gh.factory<_i55.FetchFiltersUseCase>(
       () => _i55.FetchFiltersUseCase(gh<_i505.FilterRepository>()),
     );
