@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/constants/app_colors.dart';
-import '../../../../../core/constants/app_dimensions.dart';
-import '../../../../../core/constants/app_strings.dart';
+import '../constants/app_colors.dart';
+import '../constants/app_dimensions.dart';
+import '../constants/app_strings.dart';
 
-class ProfileTapWidget extends StatelessWidget {
-  const ProfileTapWidget({super.key, required this.title, required this.icon,required this.route});
+class CustomServiceBtn extends StatelessWidget {
+  const CustomServiceBtn({super.key, required this.title, required this.icon,required this.route});
 final String title;
 final String icon;
 final String route;

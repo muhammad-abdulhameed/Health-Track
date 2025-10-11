@@ -68,6 +68,7 @@ abstract class AppStrings {
   static const String upcomingAppointment = 'Upcoming Scheduled';
   static const String upcomingSchedule = 'Upcoming Schedule';
   static const String schedule = 'Schedule';
+  static const String findYourDoctor = '"Find Your Doctor"';
 
 
   // App Information
@@ -256,6 +257,12 @@ abstract class AppStrings {
   static const String newPassword = 'New Password';
   static const String confirmNewPassword = 'Confirm New Password';
   static const String termsAndConditions = 'Terms & Conditions';
+  static const String helpCenter = 'Help Center';
+  static const String howCanWeHelpYou = 'How can we help you?';
+  static const String faq = 'FAQ';
+  static const String contactUs = 'Contact Us';
+  static const String popularTopic = 'Popular Topics';
+  static const String general = 'General';
 
 
   static const String dataSettings = 'Data Settings';

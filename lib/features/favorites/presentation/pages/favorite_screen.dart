@@ -5,9 +5,12 @@ import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/di/get_it.dart';
 import 'package:health_track/core/reusable_componants/custom_app_bar.dart';
 import 'package:health_track/features/favorites/presentation/manager/favorite_cubit.dart';
-import 'package:health_track/features/favorites/presentation/widgets/tap_bar_widget.dart';
+import 'package:health_track/features/favorites/presentation/widgets/custom_tap_widget.dart';
 import '../../../../core/constants/app_strings.dart';
+import '../../../../core/reusable_componants/custom_tap_bar_widget.dart';
 import '../../../filter/presentation/pages/filter_and_doctors_row_widget.dart';
+import '../widgets/list_of_favorite_doctors_widget.dart';
+import '../widgets/list_of_favorite_services_widget.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
@@ -33,7 +36,7 @@ class FavoriteScreen extends StatelessWidget {
                     child: SizedBox(height: AppDimensions.sizedBox16.h),
                   ),
                   SliverToBoxAdapter(
-                    child: TapBarWidget(),
+                    child: CustomTapBarWidget(tapsTitle: [AppStrings.doctors, AppStrings.services], tapsContent: [ListOfFavoriteDoctorsWidget(),ListOfFavoriteServicesWidget()],size: CustomTapSize.medium,),
                   ),
 
                 ],

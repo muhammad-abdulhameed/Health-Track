@@ -7,8 +7,8 @@ import 'package:health_track/core/reusable_componants/custom_app_bar.dart';
 import 'package:health_track/core/reusable_componants/gradient_container_widget.dart';
 import 'package:health_track/core/routes/app_routes.dart';
 import 'package:health_track/features/taps/profile_tap/domain/entity/profile_tap_enity.dart';
+import '../../../../../core/reusable_componants/custom_service_btn_widget.dart';
 import '../widgets/profile_info_card_widget.dart';
-import '../widgets/profile_tap_widget.dart';
 
 
 class ProfileTap extends StatelessWidget {
@@ -34,7 +34,7 @@ final List<ProfileTapEntity> profileTapList = [
          SizedBox(height: AppDimensions.sizedBox12.h,),
             Flexible(
               child: ListView.builder(
-                  itemBuilder:(context, index) => ProfileTapWidget(title: profileTapList[index].title, icon: profileTapList[index].icon, route:profileTapList[index].route ,),
+                  itemBuilder:(context, index) => CustomServiceBtn(title: profileTapList[index].title, icon: profileTapList[index].icon, route:profileTapList[index].route ,),
                   itemCount: profileTapList.length),
             ),
 

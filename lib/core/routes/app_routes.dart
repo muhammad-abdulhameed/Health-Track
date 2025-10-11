@@ -8,6 +8,7 @@ import 'package:health_track/features/doctors/presentation/pages/doctors_screen.
 import 'package:health_track/features/doctors/presentation/pages/top_rating_doctors_screen.dart';
 import 'package:health_track/features/edit_profile/presentation/pages/edit_profile_screen.dart';
 import 'package:health_track/features/favorites/presentation/pages/favorite_screen.dart';
+import 'package:health_track/features/help_center/presentation/pages/help_center_screen.dart';
 import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
 import 'package:health_track/features/settings/presentation/pages/password_manger_screen.dart';
 import 'package:health_track/features/settings/presentation/pages/privacy_policy_screen.dart';
@@ -127,6 +128,11 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.privacyPolicy,
       name: AppRoutes.privacyPolicy,
       builder: (context, state) => PrivacyPolicyScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.help,
+      name: AppRoutes.help,
+      builder: (context, state) => HelpCenterScreen(),
     ),
     /*
     GoRoute(

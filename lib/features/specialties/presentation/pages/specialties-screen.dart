@@ -31,7 +31,7 @@ class SpecialtiesScreen extends StatelessWidget {
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
-            CustomAppBar.searchAppBar(AppStrings.specialties),
+            CustomAppBar.searchAppBar(AppStrings.specialties,AppStrings.findYourDoctor),
             SliverPadding(
               padding: REdgeInsets.symmetric(
                 vertical: AppDimensions.padding16,
