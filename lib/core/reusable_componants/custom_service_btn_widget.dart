@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
+
 import '../constants/app_colors.dart';
 import '../constants/app_dimensions.dart';
 import '../constants/app_strings.dart';
+import '../utils.dart';
 
 class CustomServiceBtn extends StatelessWidget {
   const CustomServiceBtn({super.key, required this.title, required this.icon,required this.route});
@@ -16,7 +18,9 @@ final String route;
   Widget build(BuildContext context) {
     return ListTile(
       onTap: (){
-        if(title!=AppStrings.logout){
+        if(title==AppStrings.logout){
+          AppUtils.logoutBottomSheet(context);
+        }else{
           GoRouter.of(context).pushNamed(route);
         }
         },

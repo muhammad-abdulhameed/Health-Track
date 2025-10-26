@@ -1,7 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:health_track/core/reusable_componants/customElevatedBtn.dart';
+import 'package:health_track/core/reusable_componants/customFilledBtn.dart';
 import 'constants/constants.dart';
 
 class AppUtils {
+  // bottom sheets
+ static logoutBottomSheet(BuildContext context )=>showModalBottomSheet(context: context, builder:(context) => Container(
+decoration: BoxDecoration(
+  color: Colors.white,
+  borderRadius: BorderRadius.only(topLeft: Radius.circular(AppDimensions.radius20.r),topRight: Radius.circular(AppDimensions.radius20.r)
+),),
+
+    padding: REdgeInsets.symmetric(vertical: AppDimensions.padding60.h,horizontal: AppDimensions.padding24.w),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(AppStrings.areYouSureYouWantToLogout,style: Theme.of(context).textTheme.labelLarge,),
+        SizedBox(height: AppDimensions.sizedBox22.h,),
+        Row(
+          children: [
+            Flexible(child: CustomFilledBtn(text: AppStrings.cancel, onPressed: (){})),
+            SizedBox(width: AppDimensions.sizedBox12.w,),
+            Flexible(child: CustomElevatedBtn(text: AppStrings.yesLogout, onPressed: (){})),
+          ],
+        )
+      ],
+    ),
+  ), );
+
+
   // Date and Time Utilities
   static String formatDate(DateTime date) {
     return '${date.day}/${date.month}/${date.year}';
@@ -222,7 +250,7 @@ class AppUtils {
 
   // Validation Utilities
   static bool isValidEmail(String email) {
-    return RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email);
+    return RegExp(r'^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email);
   }
 
   static bool isValidPhone(String phone) {
@@ -323,15 +351,7 @@ class AppUtils {
   }
 
   // Color Utilities
-  static Color darkenColor(Color color, double factor) {
-    assert(factor >= 0 && factor <= 1);
-    return Color.fromARGB(
-      color.alpha,
-      (color.red * (1 - factor)).round(),
-      (color.green * (1 - factor)).round(),
-      (color.blue * (1 - factor)).round(),
-    );
-  }
+
 
   static Color lightenColor(Color color, double factor) {
     assert(factor >= 0 && factor <= 1);

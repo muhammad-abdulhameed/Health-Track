@@ -136,7 +136,7 @@ class AppIcons {
   
   // Appointment Icons
   static const String appointment = 'assets/icons/appointment.svg';
-  static const String schedule = 'assets/icons/schedule.svg';
+  static const String schedule = 'assets/icons/schedual icon.svg';
   static const String reminder = 'assets/icons/reminder.svg';
   static const String booking = 'assets/icons/booking.svg';
   static const String reschedule = 'assets/icons/reschedule.svg';

@@ -11,12 +11,13 @@ final OnPressed? onPressed;
   Widget build(BuildContext context) {
     return FilledButton(
       style: FilledButton.styleFrom(
-        minimumSize: Size(204.w, 45.h),
+        minimumSize: Size(191.w, 45.h),
         maximumSize: Size(269.w, 45.h),
-        backgroundColor: AppColors.onContainer,
+        backgroundColor: AppColors.background,
 
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100),
+          side: BorderSide(color: AppColors.primary,width: 0.5.w)
         ),
       ),
         onPressed: onPressed, child: Text(text,style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColors.primary),));
