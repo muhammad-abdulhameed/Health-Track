@@ -23,14 +23,15 @@ final String? phone;
             "Dr. Stella Kane",
             style:!isDocCard?Theme.of(context).textTheme.bodyMedium: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColors.primary),
           ),
+
           Text(
-            maxLines: 5,overflow: TextOverflow.fade,
+            maxLines: 5,overflow: TextOverflow.ellipsis,
             "Heart Surgeon - Flower Hospitals",
             style:!isDocCard?Theme.of(context).textTheme.bodySmall: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w400),
           ),
           if(phone!=null)
           Text(
-            maxLines: 5,overflow: TextOverflow.fade,
+            maxLines: 1,overflow: TextOverflow.ellipsis,
             phone??'',
             style:!isDocCard?Theme.of(context).textTheme.bodySmall: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w400),
           ),

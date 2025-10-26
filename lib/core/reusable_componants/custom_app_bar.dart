@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_track/core/constants/app_dimensions.dart';
 import 'package:health_track/core/constants/app_strings.dart';
 import 'package:health_track/core/reusable_componants/circle_container.dart';
+import 'package:health_track/core/reusable_componants/search_text_field.dart';
 import 'package:health_track/core/reusable_componants/semi_circural_container.dart';
 import 'package:health_track/core/reusable_componants/shader.dart';
 
 import '../constants/app_colors.dart';
-import '../constants/app_icons.dart';
 
 class CustomAppBar {
   CustomAppBar._();
@@ -46,31 +45,7 @@ class CustomAppBar {
               ),
             ),
             SizedBox(height: AppDimensions.sizedBox12.h),
-            TextField(
-              style: TextStyle(height: 1.h, fontSize: 24.sp),
-              decoration: InputDecoration(
-                constraints: BoxConstraints(maxHeight: 38.h, minHeight: 38.h),
-                filled: true,
-                fillColor: Colors.white,
-                hintText: 'Search...',
-                hintStyle: TextStyle(fontSize: 16.sp, color: AppColors.primary),
-                prefixIcon: SvgPicture.asset(
-                  AppIcons.searchIcon,
-                  height: 8.h,
-                  width: 4.w,
-                  fit: BoxFit.none,
-                ),
-
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(AppDimensions.radius50.r),
-                  borderSide: BorderSide.none,
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(AppDimensions.radius50.r),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
+           SearchTextField()
           ],
         ),
       ),

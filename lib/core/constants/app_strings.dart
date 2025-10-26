@@ -1,6 +1,8 @@
 abstract class AppStrings {
   //fontFamily
   static const String mainFont = 'LeagueSpartan';
+  static const String loremIpsumShort = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor';
+  static const String loremIpsumLong = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ';
 
   //Onboarding
   static const String onBoardingTitle1 = 'Choose your doctor ';
@@ -100,7 +102,8 @@ abstract class AppStrings {
   static const String vaccination = 'Vaccination';
   static const String surgery = 'Surgery';
   static const String therapy = 'Therapy';
-  
+  static const String scheduleAppointment = 'Schedule Appointment';
+
   // Weekday Abbreviations
   static const String monday = 'MON';
   static const String tuesday = 'TUE';
@@ -218,6 +221,7 @@ abstract class AppStrings {
   static const String sortBy = 'Sort By:';
   static const String filter = 'Filter';
   static const String topRating = 'Top Rating';
+  static const String markAll = 'Mark All';
 
   
 
@@ -263,6 +267,9 @@ abstract class AppStrings {
   static const String contactUs = 'Contact Us';
   static const String popularTopic = 'Popular Topics';
   static const String general = 'General';
+  static const String areYouSureYouWantToLogout = 'Are you sure you want to logout?';
+  static const String yesLogout = 'Yes, Logout';
+
 
 
   static const String dataSettings = 'Data Settings';

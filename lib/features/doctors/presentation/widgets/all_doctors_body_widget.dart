@@ -40,7 +40,12 @@ class AllDoctorsBodyWidget extends StatelessWidget {
             ),
           ),
         ),
-        SliverList.separated(itemBuilder: (context, index) =>DoctorCardWidget() , separatorBuilder:(context, index) =>  SizedBox(height: AppDimensions.sizedBox32.h,), itemCount: 10)
+        SliverPadding(
+            padding: REdgeInsets.symmetric(
+              vertical: AppDimensions.padding16,
+              horizontal: AppDimensions.padding16,
+            ),
+            sliver: SliverList.separated(itemBuilder: (context, index) =>DoctorCardWidget() , separatorBuilder:(context, index) =>  SizedBox(height: AppDimensions.sizedBox32.h,), itemCount: 10))
 
       ],
     );

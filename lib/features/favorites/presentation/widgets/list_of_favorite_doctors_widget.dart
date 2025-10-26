@@ -13,7 +13,7 @@ class ListOfFavoriteDoctorsWidget extends StatelessWidget {
       itemBuilder: (context, index) => FavoriteDoctorCardWidget(),
       scrollDirection: Axis.vertical,
       separatorBuilder: (_, _) =>
-          SizedBox(height: AppDimensions.sizedBox12.h),
+          SizedBox(height: AppDimensions.sizedBox19.h),
       itemCount: 4,
     );
   }

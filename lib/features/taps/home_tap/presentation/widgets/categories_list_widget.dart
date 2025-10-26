@@ -33,7 +33,7 @@ class CategoriesListWidget extends StatelessWidget {
         ),
         Padding(
           padding: REdgeInsets.symmetric(horizontal: AppDimensions.padding24.w,vertical: AppDimensions.padding16.h),
-          child: SizedBox(height: AppDimensions.sizedBox46.h,child:
+          child: SizedBox(height: AppDimensions.sizedBox51.h,child:
           ListView.separated(
             padding: EdgeInsets.zero,
             scrollDirection: Axis.horizontal,

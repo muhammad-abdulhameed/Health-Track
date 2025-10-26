@@ -10,6 +10,7 @@ import 'package:health_track/features/edit_profile/presentation/pages/edit_profi
 import 'package:health_track/features/favorites/presentation/pages/favorite_screen.dart';
 import 'package:health_track/features/help_center/presentation/pages/help_center_screen.dart';
 import 'package:health_track/features/main_layout/presentation/pages/main_layout.dart';
+import 'package:health_track/features/notification/presentation/pages/notification_screen.dart';
 import 'package:health_track/features/settings/presentation/pages/password_manger_screen.dart';
 import 'package:health_track/features/settings/presentation/pages/privacy_policy_screen.dart';
 import 'package:health_track/features/settings/presentation/pages/settings_screen.dart';
@@ -40,6 +41,7 @@ abstract class AppRoutes {
   static const String help = '/help';
   static const String paymentMethod = '/aboutUs';
   static const String privacyPolicy = '/privacyPolicy';
+  static const String notification = '/notification';
 
 }
 final GoRouter appRouter = GoRouter(
@@ -134,6 +136,12 @@ final GoRouter appRouter = GoRouter(
       name: AppRoutes.help,
       builder: (context, state) => HelpCenterScreen(),
     ),
+    GoRoute(
+      path: AppRoutes.notification,
+      name: AppRoutes.notification,
+      builder: (context, state) => NotificationScreen(),
+    ),
+
     /*
     GoRoute(
       path: AppRoutes.homeLayout,

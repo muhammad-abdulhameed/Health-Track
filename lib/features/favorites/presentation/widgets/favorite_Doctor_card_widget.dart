@@ -26,12 +26,14 @@ class FavoriteDoctorCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ProfessionalDocWidget(),
+              SizedBox(height: AppDimensions.sizedBox6.h,),
               Row(
                 children: [
-                  DocNameAndSpcializationWidget(),
+                  DocNameAndSpcializationWidget(isDocCard: true,),
                   IconButton(onPressed: (){}, icon: Icon(Icons.favorite,color: AppColors.primary,size: AppDimensions.iconSize24.sp,))
                 ],
               ),
+              SizedBox(height: AppDimensions.sizedBox12.h,),
 
               Container(
                 padding: REdgeInsets.symmetric(vertical: AppDimensions.padding2.h),
