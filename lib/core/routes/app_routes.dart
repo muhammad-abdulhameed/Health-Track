@@ -14,6 +14,7 @@ import 'package:health_track/features/notification/presentation/pages/notificati
 import 'package:health_track/features/settings/presentation/pages/password_manger_screen.dart';
 import 'package:health_track/features/settings/presentation/pages/privacy_policy_screen.dart';
 import 'package:health_track/features/settings/presentation/pages/settings_screen.dart';
+import 'package:health_track/features/taps/chats_tap/presentation/pages/chat_screen.dart';
 import '../../features/app_entry/onBoarding/data/data_sources/on_boarding_local_data_source.dart';
 import '../../features/app_entry/onBoarding/presentation/pages/on_boarding_screen.dart';
 import '../../features/settings/presentation/pages/notification_setting_screen.dart';
@@ -42,6 +43,7 @@ abstract class AppRoutes {
   static const String paymentMethod = '/aboutUs';
   static const String privacyPolicy = '/privacyPolicy';
   static const String notification = '/notification';
+  static const String chatScreen = '/chatScreen';
 
 }
 final GoRouter appRouter = GoRouter(
@@ -140,6 +142,11 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.notification,
       name: AppRoutes.notification,
       builder: (context, state) => NotificationScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.chatScreen,
+      name: AppRoutes.chatScreen,
+      builder: (context, state) => ChatScreen(),
     ),
 
     /*
