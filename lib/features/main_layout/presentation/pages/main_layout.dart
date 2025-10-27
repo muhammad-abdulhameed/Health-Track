@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_track/core/core.dart';
+import 'package:health_track/features/taps/chats_tap/presentation/pages/chats_tap.dart';
 import 'package:health_track/features/taps/home_tap/presentation/pages/home_tap.dart';
 import 'package:health_track/features/taps/profile_tap/presentation/pages/profile_tap.dart';
 
@@ -19,7 +20,7 @@ class _MainLayoutState extends State<MainLayout> {
   final List<Widget> _pages = [
     // Add your pages here
     HomeTap(), // Placeholder for Home
-    Container(color: Colors.blue), // Placeholder for Messages
+    ChatsTap(), // Placeholder for Messages
     ProfileTap(), // Placeholder for Profile
     Container(color: Colors.yellow), // Placeholder for Calendar
   ];

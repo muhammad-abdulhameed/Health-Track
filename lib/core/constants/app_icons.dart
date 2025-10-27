@@ -34,7 +34,8 @@ class AppIcons {
   static const String arrowRight = 'assets/icons/arrow_right.svg';
   static const String arrowDown = 'assets/icons/arrow down icon.svg';
   static const String arrowUp = 'assets/icons/arrow_up.svg';
-  
+  static const String resumeRecord = 'assets/icons/resume record icon.svg';
+
   // Status Icons
   static const String heart = 'assets/icons/heart.svg';
   static const String star = 'assets/icons/star.svg';

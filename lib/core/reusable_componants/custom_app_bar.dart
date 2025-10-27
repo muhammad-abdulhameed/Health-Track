@@ -121,4 +121,41 @@ class CustomAppBar {
       ),
     ),
   );
+
+
+  static PreferredSizeWidget chatAppBar(BuildContext context) => AppBar(
+    leadingWidth: 20.w,
+    toolbarHeight: 70.h,
+    actionsPadding: EdgeInsets.symmetric(horizontal: AppDimensions.padding16.w),
+    centerTitle: true,
+    leading: IconButton(onPressed: (){
+       Navigator.pop(context);
+    },icon:Icon(Icons.arrow_back_ios, size: AppDimensions.iconSize24.sp,)),
+    title: Text('Dr. John Doe'),
+    actions: [
+      CircleContainer(
+        child: CustomShader(
+          child: Icon(
+            Icons.phone_in_talk_outlined,
+            size: AppDimensions.iconSize16.sp,
+          ),
+        ),
+      ),
+
+      CircleContainer(
+        child: CustomShader(
+          child: Icon(Icons.videocam, size: AppDimensions.iconSize16.sp),
+        ),
+      ),
+    ],
+    flexibleSpace: Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: AppColors.mainGradient,
+        ),
+      ),
+    ),
+  );
 }

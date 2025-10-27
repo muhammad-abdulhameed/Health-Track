@@ -56,6 +56,7 @@ abstract class AppStrings {
   static const String welcomeBack = 'Hi, WelcomeBack';
   static const String userName = 'Jone Doe';
   static const String home = 'Home';
+  static const String chats = 'Chats';
   static const String messages = 'Messages';
   static const String profile = 'Profile';
   static const String myProfile = 'My Profile';
@@ -222,6 +223,8 @@ abstract class AppStrings {
   static const String filter = 'Filter';
   static const String topRating = 'Top Rating';
   static const String markAll = 'Mark All';
+  static const String searchForChats = 'Search for Your chats...';
+  static const String writeHere = 'Write Here...';
 
   
 
